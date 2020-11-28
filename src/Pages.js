@@ -41,9 +41,7 @@ function Pages() {
             );
           }}
         />
-        <Route path="/settings" component={Settings} />
         <Route path="/info" component={Info} />
-        <Route path="/callback" component={Callback} />
         <Redirect to="/" />
       </Switch>
     </Suspense>

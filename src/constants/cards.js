@@ -7,6 +7,8 @@ const cards = JSON.parse(JSON.stringify({
 		"cardName": "Arquitens-class Command Cruiser",
 		"displayName": "Arquitens Command Cruiser",
 		"upgradeBar": [
+      "commander",
+      "title",
 			"officer",
 			"support team",
 			"defensive retrofit",
@@ -22,6 +24,8 @@ const cards = JSON.parse(JSON.stringify({
 		"cardName": "Arquitens-class Light Cruiser",
 		"displayName": "Arquitens Light Cruiser",
 		"upgradeBar": [
+      "commander",
+      "title",
 			"officer",
 			"defensive retrofit",
 			"turbolasers"
@@ -36,6 +40,8 @@ const cards = JSON.parse(JSON.stringify({
 		"cardName": "Gladiator I-class Star Destroyer",
 		"displayName": "",
 		"upgradeBar": [
+      "commander",
+      "title",
 			"officer",
 			"weapons team",
 			"support team",
@@ -51,6 +57,8 @@ const cards = JSON.parse(JSON.stringify({
 		"cardName": "Gladiator II-class Star Destroyer",
 		"displayName": "",
 		"upgradeBar": [
+      "commander",
+      "title",
 			"officer",
 			"weapons team",
 			"support team",
@@ -66,6 +74,7 @@ const cards = JSON.parse(JSON.stringify({
 		"cardName": "Gozanti-class Assault Carriers",
 		"displayName": "",
 		"upgradeBar": [
+      "title",
 			"officer",
 			"offensive retrofit",
 			"fleet support"
@@ -80,6 +89,7 @@ const cards = JSON.parse(JSON.stringify({
 		"cardName": "Gozanti-class Cruisers",
 		"displayName": "",
 		"upgradeBar": [
+      "title",
 			"officer",
 			"offensive retrofit",
 			"fleet support"
@@ -94,6 +104,8 @@ const cards = JSON.parse(JSON.stringify({
 		"cardName": "Imperial I-class Star Destroyer",
 		"displayName": "",
 		"upgradeBar": [
+      "commander",
+      "title",
 			"officer",
 			"weapons team",
 			"offensive retrofit",
@@ -111,6 +123,8 @@ const cards = JSON.parse(JSON.stringify({
 		"cardName": "Imperial II-class Star Destroyer",
 		"displayName": "",
 		"upgradeBar": [
+      "commander",
+      "title",
 			"officer",
 			"weapons team",
 			"offensive retrofit",
@@ -128,6 +142,8 @@ const cards = JSON.parse(JSON.stringify({
 		"cardName": "Imperial Star Destroyer Cymoon 1 Refit",
 		"displayName": "Imperial Cymoon Star Destroyer",
 		"upgradeBar": [
+      "commander",
+      "title",
 			"officer",
 			"weapons team",
 			"fleet command",
@@ -145,6 +161,8 @@ const cards = JSON.parse(JSON.stringify({
 		"cardName": "Imperial Star Destroyer Kuat Refit",
 		"displayName": "Imperial Kuat Star Destroyer",
 		"upgradeBar": [
+      "commander",
+      "title",
 			"officer",
 			"weapons team",
 			"offensive retrofit",
@@ -162,6 +180,8 @@ const cards = JSON.parse(JSON.stringify({
 		"cardName": "Interdictor Combat Refit",
 		"displayName": "",
 		"upgradeBar": [
+      "commander",
+      "title",
 			"officer",
 			"support team",
 			"offensive retrofit",
@@ -178,6 +198,8 @@ const cards = JSON.parse(JSON.stringify({
 		"cardName": "Interdictor Suppression Refit",
 		"displayName": "",
 		"upgradeBar": [
+      "commander",
+      "title",
 			"officer",
 			"support team",
 			"offensive retrofit",
@@ -195,6 +217,8 @@ const cards = JSON.parse(JSON.stringify({
 		"cardName": "Onager-class Star Destroyer",
 		"displayName": "",
 		"upgradeBar": [
+      "commander",
+      "title",
 			"officer",
 			"weapons team",
 			"weapons team",
@@ -211,6 +235,8 @@ const cards = JSON.parse(JSON.stringify({
 		"cardName": "Onager-class Testbed",
 		"displayName": "",
 		"upgradeBar": [
+      "commander",
+      "title",
 			"officer",
 			"weapons team",
 			"weapons team",
@@ -227,6 +253,8 @@ const cards = JSON.parse(JSON.stringify({
 		"cardName": "Quasar Fire I-class Cruiser-Carrier",
 		"displayName": "Quasar I-class Carrier",
 		"upgradeBar": [
+      "commander",
+      "title",
 			"officer",
 			"weapons team",
 			"offensive retrofit",
@@ -242,6 +270,8 @@ const cards = JSON.parse(JSON.stringify({
 		"cardName": "Quasar Fire II-class Cruiser-Carrier",
 		"displayName": "Quasar II-class Carrier",
 		"upgradeBar": [
+      "commander",
+      "title",
 			"officer",
 			"weapons team",
 			"weapons team",
@@ -257,6 +287,8 @@ const cards = JSON.parse(JSON.stringify({
 		"cardName": "Raider I-class Corvette",
 		"displayName": "",
 		"upgradeBar": [
+      "commander",
+      "title",
 			"officer",
 			"weapons team",
 			"offensive retrofit",
@@ -272,6 +304,8 @@ const cards = JSON.parse(JSON.stringify({
 		"cardName": "Raider II-class Corvette",
 		"displayName": "",
 		"upgradeBar": [
+      "commander",
+      "title",
 			"officer",
 			"weapons team",
 			"offensive retrofit",
@@ -287,6 +321,8 @@ const cards = JSON.parse(JSON.stringify({
 		"cardName": "Victory I-class Star Destroyer",
 		"displayName": "",
 		"upgradeBar": [
+      "commander",
+      "title",
 			"officer",
 			"weapons team",
 			"offensive retrofit",
@@ -303,6 +339,8 @@ const cards = JSON.parse(JSON.stringify({
 		"cardName": "Victory II-class Star Destroyer",
 		"displayName": "",
 		"upgradeBar": [
+      "commander",
+      "title",
 			"officer",
 			"weapons team",
 			"offensive retrofit",
@@ -319,6 +357,8 @@ const cards = JSON.parse(JSON.stringify({
 		"cardName": "Star Dreadnought Command Prototype",
 		"displayName": "",
 		"upgradeBar": [
+      "commander",
+      "title",
 			"officer",
 			"officer",
 			"officer",
@@ -339,6 +379,8 @@ const cards = JSON.parse(JSON.stringify({
 		"cardName": "Star Dreadnought Assault Prototype",
 		"displayName": "",
 		"upgradeBar": [
+      "commander",
+      "title",
 			"officer",
 			"officer",
 			"officer",
@@ -360,6 +402,8 @@ const cards = JSON.parse(JSON.stringify({
 		"cardName": "Executor I-class Star Dreadnought",
 		"displayName": "",
 		"upgradeBar": [
+      "commander",
+      "title",
 			"officer",
 			"officer",
 			"officer",
@@ -383,6 +427,8 @@ const cards = JSON.parse(JSON.stringify({
 		"cardName": "Executor II-class Star Dreadnought",
 		"displayName": "",
 		"upgradeBar": [
+      "commander",
+      "title",
 			"officer",
 			"officer",
 			"officer",
@@ -406,6 +452,8 @@ const cards = JSON.parse(JSON.stringify({
 		"cardName": "Assault Frigate Mark II A",
 		"displayName": "",
 		"upgradeBar": [
+      "commander",
+      "title",
 			"officer",
 			"weapons team",
 			"offensive retrofit",
@@ -422,6 +470,8 @@ const cards = JSON.parse(JSON.stringify({
 		"cardName": "Assault Frigate Mark II B",
 		"displayName": "",
 		"upgradeBar": [
+      "commander",
+      "title",
 			"officer",
 			"weapons team",
 			"offensive retrofit",
@@ -438,6 +488,8 @@ const cards = JSON.parse(JSON.stringify({
 		"cardName": "CR90 Corvette A",
 		"displayName": "",
 		"upgradeBar": [
+      "commander",
+      "title",
 			"officer",
 			"support team",
 			"defensive retrofit",
@@ -453,6 +505,8 @@ const cards = JSON.parse(JSON.stringify({
 		"cardName": "CR90 Corvette B",
 		"displayName": "",
 		"upgradeBar": [
+      "commander",
+      "title",
 			"officer",
 			"support team",
 			"defensive retrofit",
@@ -468,6 +522,7 @@ const cards = JSON.parse(JSON.stringify({
 		"cardName": "GR-75 Combat Retrofits",
 		"displayName": "",
 		"upgradeBar": [
+      "title",
 			"officer",
 			"offensive retrofit",
 			"fleet support"
@@ -482,6 +537,7 @@ const cards = JSON.parse(JSON.stringify({
 		"cardName": "GR-75 Medium Transports",
 		"displayName": "",
 		"upgradeBar": [
+      "title",
 			"officer",
 			"offensive retrofit",
 			"fleet support"
@@ -496,6 +552,8 @@ const cards = JSON.parse(JSON.stringify({
 		"cardName": "Hammerhead Scout Corvette",
 		"displayName": "",
 		"upgradeBar": [
+      "commander",
+      "title",
 			"officer",
 			"offensive retrofit",
 			"weapons team",
@@ -511,6 +569,8 @@ const cards = JSON.parse(JSON.stringify({
 		"cardName": "Hammerhead Torpedo Corvette",
 		"displayName": "",
 		"upgradeBar": [
+      "commander",
+      "title",
 			"officer",
 			"offensive retrofit",
 			"weapons team",
@@ -526,6 +586,8 @@ const cards = JSON.parse(JSON.stringify({
 		"cardName": "MC30c Scout Frigate",
 		"displayName": "",
 		"upgradeBar": [
+      "commander",
+      "title",
 			"officer",
 			"weapons team",
 			"defensive retrofit",
@@ -542,6 +604,8 @@ const cards = JSON.parse(JSON.stringify({
 		"cardName": "MC30c Torpedo Frigate",
 		"displayName": "",
 		"upgradeBar": [
+      "commander",
+      "title",
 			"officer",
 			"weapons team",
 			"defensive retrofit",
@@ -558,6 +622,8 @@ const cards = JSON.parse(JSON.stringify({
 		"cardName": "MC75 Armored Cruiser",
 		"displayName": "",
 		"upgradeBar": [
+      "commander",
+      "title",
 			"officer",
 			"weapons team",
 			"offensive retrofit",
@@ -576,6 +642,8 @@ const cards = JSON.parse(JSON.stringify({
 		"cardName": "MC75 Ordnance Cruiser",
 		"displayName": "",
 		"upgradeBar": [
+      "commander",
+      "title",
 			"officer",
 			"weapons team",
 			"offensive retrofit",
@@ -585,6 +653,16 @@ const cards = JSON.parse(JSON.stringify({
 		],
 		"tags": []
 	},
+	"bk": {
+		"isMod": false,
+	  "isUnique": true,
+	  "cost": 5,
+	  "cardType": "upgrade",
+	  "cardSubtype": "title",
+	  "cardName": "Avenger",
+	  "displayName": "",
+	  "requirements": [{ "cardNameIncludes": "Imperial" }]
+	},
 	"bl": {
 		"faction": "rebels",
 		"cardType": "ship",
@@ -593,6 +671,8 @@ const cards = JSON.parse(JSON.stringify({
 		"cardName": "MC80 Command Cruiser",
 		"displayName": "",
 		"upgradeBar": [
+      "commander",
+      "title",
 			"officer",
 			"support team",
 			"offensive retrofit",
@@ -610,6 +690,8 @@ const cards = JSON.parse(JSON.stringify({
 		"cardName": "MC80 Assault Cruiser",
 		"displayName": "",
 		"upgradeBar": [
+      "commander",
+      "title",
 			"officer",
 			"support team",
 			"defensive retrofit",
@@ -627,6 +709,8 @@ const cards = JSON.parse(JSON.stringify({
 		"cardName": "MC80 Battle Cruiser",
 		"displayName": "",
 		"upgradeBar": [
+      "commander",
+      "title",
 			"officer",
 			"weapons team",
 			"support team",
@@ -644,6 +728,8 @@ const cards = JSON.parse(JSON.stringify({
 		"cardName": "MC80 Star Cruiser",
 		"displayName": "",
 		"upgradeBar": [
+      "commander",
+      "title",
 			"officer",
 			"weapons team",
 			"support team",
@@ -661,6 +747,8 @@ const cards = JSON.parse(JSON.stringify({
 		"cardName": "Nebulon-B Escort Frigate",
 		"displayName": "",
 		"upgradeBar": [
+      "commander",
+      "title",
 			"officer",
 			"support team",
 			"turbolasers"
@@ -675,6 +763,8 @@ const cards = JSON.parse(JSON.stringify({
 		"cardName": "Nebulon-B Support Refit",
 		"displayName": "",
 		"upgradeBar": [
+      "commander",
+      "title",
 			"officer",
 			"support team",
 			"turbolasers"
@@ -689,6 +779,8 @@ const cards = JSON.parse(JSON.stringify({
 		"cardName": "Modified Pelta-class Assault Ship",
 		"displayName": "Pelta-class Assault Ship",
 		"upgradeBar": [
+      "commander",
+      "title",
 			"officer",
 			"support team",
 			"fleet command",
@@ -704,6 +796,8 @@ const cards = JSON.parse(JSON.stringify({
 		"cardName": "Modified Pelta-class Command Ship",
 		"displayName": "Pelta-class Command Ship",
 		"upgradeBar": [
+      "commander",
+      "title",
 			"officer",
 			"support team",
 			"fleet command",
@@ -719,6 +813,8 @@ const cards = JSON.parse(JSON.stringify({
 		"cardName": "Starhawk-class Battleship Mark I",
 		"displayName": "",
 		"upgradeBar": [
+      "commander",
+      "title",
 			"officer",
 			"officer",
 			"weapons team",
@@ -737,6 +833,8 @@ const cards = JSON.parse(JSON.stringify({
 		"cardName": "Starhawk-class Battleship Mark II",
 		"displayName": "",
 		"upgradeBar": [
+      "commander",
+      "title",
 			"officer",
 			"officer",
 			"weapons team",
@@ -755,12 +853,14 @@ const cards = JSON.parse(JSON.stringify({
 		"cardName": "Acclamator I-class Assault Ship",
 		"displayName": "",
 		"upgradeBar": [
+      "commander",
+      "title",
 			"officer",
 			"weapons team",
 			"offensive retrofit",
 			"offensive retrofit",
 			"ordnance",
-			"super weapon"
+			"turbolasers"
 		],
 		"tags": ["Clone", "Transport"]
 	},
@@ -772,11 +872,13 @@ const cards = JSON.parse(JSON.stringify({
 		"cardName": "Acclamator II-class Assault Ship",
 		"displayName": "",
 		"upgradeBar": [
+      "commander",
+      "title",
 			"officer",
 			"weapons team",
 			"defensive retrofit",
 			"ordnance",
-			"super weapon"
+			"turbolasers"
 		],
 		"tags": ["Clone", "Bombard", "Transport"]
 	},
@@ -788,6 +890,8 @@ const cards = JSON.parse(JSON.stringify({
 		"cardName": "Consular-class Armed Cruiser",
 		"displayName": "",
 		"upgradeBar": [
+      "commander",
+      "title",
 			"officer",
 			"support team",
 			"defensive retrofit",
@@ -803,6 +907,8 @@ const cards = JSON.parse(JSON.stringify({
 		"cardName": "Consular-class Charger c70",
 		"displayName": "",
 		"upgradeBar": [
+      "commander",
+      "title",
 			"officer",
 			"support team",
 			"offensive retrofit",
@@ -818,6 +924,8 @@ const cards = JSON.parse(JSON.stringify({
 		"cardName": "Unknown",
 		"displayName": "",
 		"upgradeBar": [
+      "commander",
+      "title",
 			"officer"
 		],
 		"tags": []
@@ -830,6 +938,8 @@ const cards = JSON.parse(JSON.stringify({
 		"cardName": "Unknown",
 		"displayName": "",
 		"upgradeBar": [
+      "commander",
+      "title",
 			"officer"
 		],
 		"tags": []
@@ -842,6 +952,8 @@ const cards = JSON.parse(JSON.stringify({
 		"cardName": "Munificent-class Comms Frigate",
 		"displayName": "",
 		"upgradeBar": [
+      "commander",
+      "title",
 			"officer",
 			"support team",
 			"offensive retrofit",
@@ -858,6 +970,8 @@ const cards = JSON.parse(JSON.stringify({
 		"cardName": "Munificent-class Star Frigate",
 		"displayName": "",
 		"upgradeBar": [
+      "commander",
+      "title",
 			"officer",
 			"support team",
 			"defensive retrofit",
@@ -874,6 +988,8 @@ const cards = JSON.parse(JSON.stringify({
 		"cardName": "Hardcell-class Transport",
 		"displayName": "",
 		"upgradeBar": [
+      "commander",
+      "title",
 			"officer",
 			"officer",
 			"support team",
@@ -889,6 +1005,8 @@ const cards = JSON.parse(JSON.stringify({
 		"cardName": "Hardcell-class Battle Refit",
 		"displayName": "",
 		"upgradeBar": [
+      "commander",
+      "title",
 			"officer",
 			"offensive retrofit",
 			"defensive retrofit",
@@ -904,6 +1022,8 @@ const cards = JSON.parse(JSON.stringify({
 		"cardName": "Unknown",
 		"displayName": "",
 		"upgradeBar": [
+      "commander",
+      "title",
 			"officer"
 		],
 		"tags": []
@@ -916,6 +1036,8 @@ const cards = JSON.parse(JSON.stringify({
 		"cardName": "Unknown",
 		"displayName": "",
 		"upgradeBar": [
+      "commander",
+      "title",
 			"officer"
 		],
 		"tags": []
@@ -1010,16 +1132,6 @@ const cards = JSON.parse(JSON.stringify({
 		"cardName": "Hera Syndulla",
 		"displayName": ""
 	},
-	"cq": {
-		"faction": "rebels",
-		"cardType": "squadron",
-		"cardSubtype": "Moldy Crow",
-		"cost": 19,
-		"isAce": true,
-		"isUnique": true,
-		"cardName": "Jan Ors",
-		"displayName": ""
-	},
 	"cr": {
 		"faction": "rebels",
 		"cardType": "squadron",
@@ -1064,7 +1176,7 @@ const cards = JSON.parse(JSON.stringify({
 		"faction": "rebels",
 		"cardType": "squadron",
 		"cardSubtype": "Moldy Crow",
-		"cost": 19,
+		"cost": -1,
 		"isAce": true,
 		"isUnique": true,
 		"cardName": "Jan Ors",
@@ -1804,7 +1916,7 @@ const cards = JSON.parse(JSON.stringify({
 		"faction": "republic",
 		"cardType": "squadron",
 		"cardSubtype": "ARC-170 Starfighter Squadron",
-		"cost": 12,
+		"cost": 15,
 		"isAce": false,
 		"isUnique": false,
 		"cardName": "ARC-170 Starfighter Squadron",
@@ -1853,17 +1965,17 @@ const cards = JSON.parse(JSON.stringify({
 	"fw": {
 		"faction": "separatists",
 		"cardType": "squadron",
-		"cardSubtype": "Droid Tri-Fighter Squadron",
+		"cardSubtype": "Droid Tri-fighter Squadron",
 		"cost": 19,
 		"isAce": true,
 		"isUnique": true,
-		"cardName": "Plac-Arphocc Prototypes",
+		"cardName": "Phlac-arphocc Prototypes",
 		"displayName": ""
 	},
 	"fx": {
 		"faction": "separatists",
 		"cardType": "squadron",
-		"cardSubtype": "Droid Tri-Fighter Squadron",
+		"cardSubtype": "Droid Tri-fighter Squadron",
 		"cost": 17,
 		"isAce": true,
 		"isUnique": true,
@@ -1903,11 +2015,11 @@ const cards = JSON.parse(JSON.stringify({
 	"gb": {
 		"faction": "separatists",
 		"cardType": "squadron",
-		"cardSubtype": "Droid Tri-Fighter Squadron",
+		"cardSubtype": "Droid Tri-fighter Squadron",
 		"cost": 11,
 		"isAce": false,
 		"isUnique": false,
-		"cardName": "Droid Tri-Fighter Squadron",
+		"cardName": "Droid Tri-fighter Squadron",
 		"displayName": ""
 	},
 	"gc": {
@@ -1944,8 +2056,8 @@ const cards = JSON.parse(JSON.stringify({
 		"cardSubtype": "commander",
 		"cost": 20,
 		"isUnique": true,
-		"cardName": "Admiral Ozzel",
-		"displayName": ""
+		"cardName": "Commander Admiral Ozzel",
+		"displayName": "Admiral Ozzel"
 	},
 	"gg": {
 		"faction": "empire",
@@ -1980,7 +2092,7 @@ const cards = JSON.parse(JSON.stringify({
 		"cardSubtype": "commander",
 		"cost": 36,
 		"isUnique": true,
-		"cardName": "Darth Vader",
+		"cardName": "Commander Darth Vader",
 		"displayName": ""
 	},
 	"gk": {
@@ -2115,8 +2227,8 @@ const cards = JSON.parse(JSON.stringify({
 		"cardSubtype": "commander",
 		"cost": 20,
 		"isUnique": true,
-		"cardName": "Kyrsta AGate",
-		"displayName": ""
+		"cardName": "Commander Kyrsta Agate",
+		"displayName": "Kyrsta Agate"
 	},
 	"gz": {
 		"faction": "rebels",
@@ -2124,8 +2236,8 @@ const cards = JSON.parse(JSON.stringify({
 		"cardSubtype": "commander",
 		"cost": 30,
 		"isUnique": true,
-		"cardName": "Leia Organa",
-		"displayName": ""
+		"cardName": "Commander Leia Organa",
+		"displayName": "Leia Organa"
 	},
 	"ha": {
 		"faction": "rebels",
@@ -2142,8 +2254,8 @@ const cards = JSON.parse(JSON.stringify({
 		"cardSubtype": "commander",
 		"cost": 28,
 		"isUnique": true,
-		"cardName": "Bail Organa",
-		"displayName": ""
+		"cardName": "Commander Bail Organa",
+		"displayName": "Bail Organa"
 	},
 	"hc": {
 		"faction": "republic",
@@ -2158,36 +2270,36 @@ const cards = JSON.parse(JSON.stringify({
 		"faction": "republic",
 		"cardType": "upgrade",
 		"cardSubtype": "commander",
-		"cost": 30,
+		"cost": -1,
 		"isUnique": true,
-		"cardName": "Admiral Tarkin",
+		"cardName": "",
 		"displayName": ""
 	},
 	"he": {
 		"faction": "republic",
 		"cardType": "upgrade",
 		"cardSubtype": "commander",
-		"cost": 24,
+		"cost": -1,
 		"isUnique": true,
-		"cardName": "Admiral Yularen",
+		"cardName": "Unknown",
 		"displayName": ""
 	},
 	"hf": {
 		"faction": "republic",
 		"cardType": "upgrade",
 		"cardSubtype": "commander",
-		"cost": 25,
+		"cost": -1,
 		"isUnique": true,
-		"cardName": "Luminara Unduli",
+		"cardName": "Unknown",
 		"displayName": ""
 	},
 	"hg": {
 		"faction": "republic",
 		"cardType": "upgrade",
 		"cardSubtype": "commander",
-		"cost": 26,
+		"cost": -1,
 		"isUnique": true,
-		"cardName": "Plo Koon",
+		"cardName": "Unknown",
 		"displayName": ""
 	},
 	"hh": {
@@ -2212,39 +2324,1961 @@ const cards = JSON.parse(JSON.stringify({
 		"faction": "separatists",
 		"cardType": "upgrade",
 		"cardSubtype": "commander",
-		"cost": 36,
+		"cost": -1,
 		"isUnique": true,
-		"cardName": "Admiral Trench",
+		"cardName": "Unknown",
 		"displayName": ""
 	},
 	"hk": {
 		"faction": "separatists",
 		"cardType": "upgrade",
 		"cardSubtype": "commander",
-		"cost": 20,
+		"cost": -1,
 		"isUnique": true,
-		"cardName": "General Grievous",
+		"cardName": "Unknown",
 		"displayName": ""
 	},
 	"hl": {
 		"faction": "separatists",
 		"cardType": "upgrade",
 		"cardSubtype": "commander",
-		"cost": 28,
+		"cost": -1,
 		"isUnique": true,
-		"cardName": "Mar Tuuk",
+		"cardName": "Unknown",
 		"displayName": ""
 	},
 	"hm": {
 		"faction": "separatists",
 		"cardType": "upgrade",
 		"cardSubtype": "commander",
-		"cost": 26,
+		"cost": -1,
 		"isUnique": true,
-		"cardName": "TF-1726",
+		"cardName": "Unknown",
 		"displayName": ""
 	},
+	"hn": {
+		"cardType": "objective",
+		"cardSubtype": "assault",
+		"cardName": "Advanced Gunnery",
+		"displayName": ""
+	},
+	"ho": {
+		"cardType": "objective",
+		"cardSubtype": "assault",
+		"cardName": "Blockade Run",
+		"displayName": ""
+	},
+	"hp": {
+		"cardType": "objective",
+		"cardSubtype": "assault",
+		"cardName": "Close-Range Intel Scan",
+		"displayName": ""
+	},
+	"hq": {
+		"cardType": "objective",
+		"cardSubtype": "assault",
+		"cardName": "Ion Storm",
+		"displayName": ""
+	},
+	"hr": {
+		"cardType": "objective",
+		"cardSubtype": "assault",
+		"cardName": "Marked for Destruction",
+		"displayName": ""
+	},
+	"hs": {
+		"cardType": "objective",
+		"cardSubtype": "assault",
+		"cardName": "Most Wanted",
+		"displayName": ""
+	},
+	"ht": {
+		"cardType": "objective",
+		"cardSubtype": "assault",
+		"cardName": "Opening Salvo",
+		"displayName": ""
+	},
+	"hu": {
+		"cardType": "objective",
+		"cardSubtype": "assault",
+		"cardName": "Precision Strike",
+		"displayName": ""
+	},
+	"hv": {
+		"cardType": "objective",
+		"cardSubtype": "assault",
+		"cardName": "Rift Assault",
+		"displayName": ""
+	},
+	"hw": {
+		"cardType": "objective",
+		"cardSubtype": "assault",
+		"cardName": "Station Assault",
+		"displayName": ""
+	},
+	"hx": {
+		"cardType": "objective",
+		"cardSubtype": "assault",
+		"cardName": "Surprise Attack",
+		"displayName": ""
+	},
+	"hy": {
+		"cardType": "objective",
+		"cardSubtype": "assault",
+		"cardName": "Targeting Beacons",
+		"displayName": ""
+	},
+	"hz": {
+		"cardType": "objective",
+		"cardSubtype": "defense",
+		"cardName": "Planetary Ion Cannon",
+		"displayName": ""
+	},
+	"ia": {
+		"cardType": "objective",
+		"cardSubtype": "defense",
+		"cardName": "Rift Ambush",
+		"displayName": ""
+	},
+	"ib": {
+		"cardType": "objective",
+		"cardSubtype": "defense",
+		"cardName": "Abandoned Mining Facility",
+		"displayName": ""
+	},
+	"ic": {
+		"cardType": "objective",
+		"cardSubtype": "defense",
+		"cardName": "Asteroid Tactics",
+		"displayName": ""
+	},
+	"id": {
+		"cardType": "objective",
+		"cardSubtype": "defense",
+		"cardName": "Capture the VIP",
+		"displayName": ""
+	},
+	"ie": {
+		"cardType": "objective",
+		"cardSubtype": "defense",
+		"cardName": "Contested Outpost",
+		"displayName": ""
+	},
+	"if": {
+		"cardType": "objective",
+		"cardSubtype": "defense",
+		"cardName": "Fighter Ambush",
+		"displayName": ""
+	},
+	"ig": {
+		"cardType": "objective",
+		"cardSubtype": "defense",
+		"cardName": "Fire Lanes",
+		"displayName": ""
+	},
+	"ih": {
+		"cardType": "objective",
+		"cardSubtype": "defense",
+		"cardName": "Fleet Ambush",
+		"displayName": ""
+	},
+	"ii": {
+		"cardType": "objective",
+		"cardSubtype": "defense",
+		"cardName": "Fleet in Being",
+		"displayName": ""
+	},
+	"ij": {
+		"cardType": "objective",
+		"cardSubtype": "defense",
+		"cardName": "Hyperspace Assault",
+		"displayName": ""
+	},
+	"ik": {
+		"cardType": "objective",
+		"cardSubtype": "defense",
+		"cardName": "Jamming Barrier",
+		"displayName": ""
+	},
+	"il": {
+		"cardType": "objective",
+		"cardSubtype": "navigation",
+		"cardName": "Dangerous Territory",
+		"displayName": ""
+	},
+	"im": {
+		"cardType": "objective",
+		"cardSubtype": "navigation",
+		"cardName": "Doomed Station",
+		"displayName": ""
+	},
+	"in": {
+		"cardType": "objective",
+		"cardSubtype": "navigation",
+		"cardName": "Hyperspace Migration",
+		"displayName": ""
+	},
+	"io": {
+		"cardType": "objective",
+		"cardSubtype": "navigation",
+		"cardName": "Infested Fields",
+		"displayName": ""
+	},
+	"ip": {
+		"cardType": "objective",
+		"cardSubtype": "navigation",
+		"cardName": "Intel Sweep",
+		"displayName": ""
+	},
+	"iq": {
+		"cardType": "objective",
+		"cardSubtype": "navigation",
+		"cardName": "Minefields",
+		"displayName": ""
+	},
+	"ir": {
+		"cardType": "objective",
+		"cardSubtype": "navigation",
+		"cardName": "Navigational Hazards",
+		"displayName": ""
+	},
+	"is": {
+		"cardType": "objective",
+		"cardSubtype": "navigation",
+		"cardName": "Salvage Run",
+		"displayName": ""
+	},
+	"it": {
+		"cardType": "objective",
+		"cardSubtype": "navigation",
+		"cardName": "Sensor Net",
+		"displayName": ""
+	},
+	"iu": {
+		"cardType": "objective",
+		"cardSubtype": "navigation",
+		"cardName": "Solar Corona",
+		"displayName": ""
+	},
+	"iv": {
+		"cardType": "objective",
+		"cardSubtype": "navigation",
+		"cardName": "Superior Positions",
+		"displayName": ""
+	},
+	"iw": {
+		"cardType": "objective",
+		"cardSubtype": "navigation",
+		"cardName": "Volatile Deposits",
+		"displayName": ""
+	},
+	"ix": {
+		"faction": "separatists",
+		"cardType": "ship",
+		"cardSubtype": "large",
+		"cost": -1,
+		"cardName": "Unknown",
+		"displayName": "",
+		"upgradeBar": [
+      "commander",
+      "title",
+			"officer"
+		],
+		"tags": []
+	},
+	"iy": {
+		"faction": "separatists",
+		"cardType": "ship",
+		"cardSubtype": "large",
+		"cost": -1,
+		"cardName": "Unknown",
+		"displayName": "",
+		"upgradeBar": [
+      "commander",
+      "title",
+			"officer"
+		],
+		"tags": []
+	},
+	"iz": {
+		"faction": "republic",
+		"cardType": "ship",
+		"cardSubtype": "large",
+		"cost": -1,
+		"cardName": "Unknown",
+		"displayName": "",
+		"upgradeBar": [
+      "commander",
+      "title",
+			"officer"
+		],
+		"tags": []
+	},
+	"ja": {
+		"faction": "republic",
+		"cardType": "ship",
+		"cardSubtype": "large",
+		"cost": -1,
+		"cardName": "Unknown",
+		"displayName": "",
+		"upgradeBar": [
+      "commander",
+      "title",
+			"officer"
+		],
+		"tags": []
+	},
+	"jb": {
+	  "isMod": false,
+	  "isUnique": true,
+	  "cost": 3,
+	  "cardType": "upgrade",
+	  "cardSubtype": "title",
+	  "cardName": "Centicore",
+	  "displayName": "",
+	  "requirements": [{ "cardNameIncludes": "Arquitens" }]
+	},
+	"jc": {
+		"isMod": false,
+	  "isUnique": true,
+	  "cost": 4,
+	  "cardType": "upgrade",
+	  "cardSubtype": "title",
+	  "cardName": "Hand of Justice",
+	  "displayName": "",
+	  "requirements": [{ "cardNameIncludes": "Arquitens" }]
+	},
+	"jd": {
+		"isMod": false,
+	  "isUnique": true,
+	  "cost": 10,
+	  "cardType": "upgrade",
+	  "cardSubtype": "title",
+	  "cardName": "Demolisher",
+	  "displayName": "",
+	  "requirements": [{ "cardNameIncludes": "Gladiator" }]
+	},
+	"je": {
+		"isMod": false,
+	  "isUnique": true,
+	  "cost": 3,
+	  "cardType": "upgrade",
+	  "cardSubtype": "title",
+	  "cardName": "Insidious",
+	  "displayName": "",
+	  "requirements": [{ "cardNameIncludes": "Gladiator" }]
+	},
+	"jf": {
+		"isMod": false,
+	  "isUnique": true,
+	  "cost": 4,
+	  "cardType": "upgrade",
+	  "cardSubtype": "title",
+	  "cardName": "Suppressor",
+	  "displayName": "",
+	  "requirements": [{ "cardNameIncludes": "Gozanti" }]
+	},
+	"jg": {
+		"isMod": false,
+	  "isUnique": true,
+	  "cost": 2,
+	  "cardType": "upgrade",
+	  "cardSubtype": "title",
+	  "cardName": "Vector",
+	  "displayName": "",
+	  "requirements": [{ "cardNameIncludes": "Gozanti" }]
+	},
+	"jh": {
+		"isMod": false,
+	  "isUnique": false,
+	  "cost": 5,
+	  "cardType": "upgrade",
+	  "cardSubtype": "title",
+	  "cardName": "Seventh Fleet Star Destroyer",
+	  "displayName": "Seventh Fleet",
+	  "requirements": [{ "cardNameIncludes": "Star Destroyer" }]
+	},
+	"ji": {
+		"isMod": false,
+	  "isUnique": true,
+	  "cost": 4,
+	  "cardType": "upgrade",
+	  "cardSubtype": "title",
+	  "cardName": "Chimaera",
+	  "displayName": "",
+	  "requirements": [
+			"AND",
+			{ "cardNameIncludes": "Imperial" },
+			{ "fleet command": false }
+		],
+		"addsUpgradeSlot": ["fleet command"]
+	},
+	"jj": {
+		"isMod": false,
+	  "isUnique": true,
+	  "cost": 10,
+	  "cardType": "upgrade",
+	  "cardSubtype": "title",
+	  "cardName": "Devastator",
+	  "displayName": "",
+	  "requirements": [{ "cardNameIncludes": "Imperial" }]
+	},
+	"jk": {
+		"isMod": false,
+	  "isUnique": true,
+	  "cost": 3,
+	  "cardType": "upgrade",
+	  "cardSubtype": "title",
+	  "cardName": "Relentless",
+	  "displayName": "",
+	  "requirements": [{ "cardNameIncludes": "Imperial" }]
+	},
+	"jl": {
+		"isMod": false,
+	  "isUnique": true,
+	  "cost": 4,
+	  "cardType": "upgrade",
+	  "cardSubtype": "title",
+	  "cardName": "Sovereign",
+	  "displayName": "",
+	  "requirements": [{ "cardNameIncludes": "Imperial" }]
+	},
+	"jm": {
+		"isMod": false,
+	  "isUnique": true,
+	  "cost": 3,
+	  "cardType": "upgrade",
+	  "cardSubtype": "title",
+	  "cardName": "Interdictor",
+	  "displayName": "",
+	  "requirements": [{ "cardNameIncludes": "Interdictor" }]
+	},
+	"jn": {
+		"isMod": false,
+	  "isUnique": true,
+	  "cost": 5,
+	  "cardType": "upgrade",
+	  "cardSubtype": "title",
+	  "cardName": "Cataclysm",
+	  "displayName": "",
+	  "requirements": [{ "cardNameIncludes": "Onager" }]
+	},
+	"jo": {
+		"isMod": false,
+	  "isUnique": true,
+	  "cost": 4,
+	  "cardType": "upgrade",
+	  "cardSubtype": "title",
+	  "cardName": "Rakehell",
+	  "displayName": "",
+	  "requirements": [{ "cardNameIncludes": "Onager" }]
+	},
+	"jp": {
+		"isMod": false,
+	  "isUnique": true,
+	  "cost": 10,
+	  "cardType": "upgrade",
+	  "cardSubtype": "title",
+	  "cardName": "Sunder",
+	  "displayName": "",
+	  "requirements": [{ "cardNameIncludes": "Onager" }]
+	},
+	"jq": {
+		"isMod": false,
+	  "isUnique": true,
+	  "cost": 2,
+	  "cardType": "upgrade",
+	  "cardSubtype": "title",
+	  "cardName": "Pursuant",
+	  "displayName": "",
+	  "requirements": [{ "cardNameIncludes": "Quasar" }]
+	},
+	"jr": {
+		"isMod": false,
+	  "isUnique": true,
+	  "cost": 3,
+	  "cardType": "upgrade",
+	  "cardSubtype": "title",
+	  "cardName": "Squall",
+	  "displayName": "",
+	  "requirements": [{ "cardNameIncludes": "Quasar" }]
+	},
+	"js": {
+		"isMod": false,
+	  "isUnique": true,
+	  "cost": 2,
+	  "cardType": "upgrade",
+	  "cardSubtype": "title",
+	  "cardName": "Corvus",
+	  "displayName": "",
+	  "requirements": [{ "cardNameIncludes": "Raider" }]
+	},
+	"jt": {
+		"isMod": false,
+	  "isUnique": true,
+	  "cost": 4,
+	  "cardType": "upgrade",
+	  "cardSubtype": "title",
+	  "cardName": "Impetuous",
+	  "displayName": "",
+	  "requirements": [{ "cardNameIncludes": "Raider" }]
+	},
+	"ju": {
+		"isMod": false,
+	  "isUnique": true,
+	  "cost": 4,
+	  "cardType": "upgrade",
+	  "cardSubtype": "title",
+	  "cardName": "Instigator",
+	  "displayName": "",
+	  "requirements": [{ "cardNameIncludes": "Raider" }]
+	},
+	"jv": {
+		"isMod": false,
+	  "isUnique": true,
+	  "cost": 8,
+	  "cardType": "upgrade",
+	  "cardSubtype": "title",
+	  "cardName": "Annihilator",
+	  "displayName": "",
+	  "requirements": [
+			"OR",
+			{ "cardNameIncludes": "Executor" },
+			{ "cardNameIncludes": "Superstar" }
+		]
+	},
+	"jw": {
+		"isMod": false,
+	  "isUnique": true,
+	  "cost": 3,
+	  "cardType": "upgrade",
+	  "cardSubtype": "title",
+	  "cardName": "Eclipse",
+	  "displayName": "",
+	  "requirements": [
+			"OR",
+			{ "cardNameIncludes": "Executor" },
+			{ "cardNameIncludes": "Superstar" }
+		]
+	},
+	"jx": {
+		"isMod": false,
+	  "isUnique": true,
+	  "cost": 2,
+	  "cardType": "upgrade",
+	  "cardSubtype": "title",
+	  "cardName": "Executor",
+	  "displayName": "",
+	  "requirements": [
+			"OR",
+			{ "cardNameIncludes": "Executor" },
+			{ "cardNameIncludes": "Superstar" }
+		]
+	},
+	"jy": {
+		"isMod": false,
+	  "isUnique": true,
+	  "cost": 4,
+	  "cardType": "upgrade",
+	  "cardSubtype": "title",
+	  "cardName": "Ravager",
+	  "displayName": "",
+	  "requirements": [
+			"OR",
+			{ "cardNameIncludes": "Executor" },
+			{ "cardNameIncludes": "Superstar" }
+		]
+	},
+	"jz": {
+		"isMod": false,
+	  "isUnique": true,
+	  "cost": 5,
+	  "cardType": "upgrade",
+	  "cardSubtype": "title",
+	  "cardName": "Corrupter",
+	  "displayName": "",
+	  "requirements": [{ "cardNameIncludes": "Victory" }]
+	},
+	"ka": {
+		"isMod": false,
+	  "isUnique": true,
+	  "cost": 12,
+	  "cardType": "upgrade",
+	  "cardSubtype": "title",
+	  "cardName": "Dominator",
+	  "displayName": "",
+	  "requirements": [{ "cardNameIncludes": "Victory" }]
+	},
+	"kb": {
+		"isMod": false,
+	  "isUnique": true,
+	  "cost": 3,
+	  "cardType": "upgrade",
+	  "cardSubtype": "title",
+	  "cardName": "Harrow",
+	  "displayName": "",
+	  "requirements": [{ "cardNameIncludes": "Victory" }],
+		"addsUpgradeSlot": ["support team"]
+	},
+	"kc": {
+		"isMod": false,
+	  "isUnique": true,
+	  "cost": 8,
+	  "cardType": "upgrade",
+	  "cardSubtype": "title",
+	  "cardName": "Warlord",
+	  "displayName": "",
+	  "requirements": [{ "cardNameIncludes": "Victory" }]
+	},
+	"kd": {
+		"isMod": false,
+	  "isUnique": true,
+	  "cost": 5,
+	  "cardType": "upgrade",
+	  "cardSubtype": "title",
+	  "cardName": "Nevoota Bee",
+	  "displayName": "",
+	  "requirements": [{ "cardNameIncludes": "Acclamator" }]
+	},
+	"ke": {
+		"isMod": false,
+	  "isUnique": true,
+	  "cost": 4,
+	  "cardType": "upgrade",
+	  "cardSubtype": "title",
+	  "cardName": "Implacable",
+	  "displayName": "",
+	  "requirements": [{ "cardNameIncludes": "Acclamator" }]
+	},
+	"kf": {
+		"isMod": false,
+	  "isUnique": true,
+	  "cost": 1,
+	  "cardType": "upgrade",
+	  "cardSubtype": "title",
+	  "cardName": "Radiant VII",
+	  "displayName": "",
+	  "requirements": [{ "cardNameIncludes": "Consular" }]
+	},
+	"kg": {
+		"isMod": false,
+	  "isUnique": true,
+	  "cost": 3,
+	  "cardType": "upgrade",
+	  "cardSubtype": "title",
+	  "cardName": "Swift Return",
+	  "displayName": "",
+	  "requirements": [{ "cardNameIncludes": "Consular" }]
+	},
+	"kh": {
+		"isMod": false,
+	  "isUnique": true,
+	  "cost": 8,
+	  "cardType": "upgrade",
+	  "cardSubtype": "title",
+	  "cardName": "Gallant Haven",
+	  "displayName": "",
+	  "requirements": [{ "cardNameIncludes": "Assault Frigate" }]
+	},
+	"ki": {
+		"isMod": false,
+	  "isUnique": true,
+	  "cost": 5,
+	  "cardType": "upgrade",
+	  "cardSubtype": "title",
+	  "cardName": "Paragon",
+	  "displayName": "",
+	  "requirements": [{ "cardNameIncludes": "Assault Frigate" }]
+	},
+	"kj": {
+		"isMod": false,
+	  "isUnique": true,
+	  "cost": 6,
+	  "cardType": "upgrade",
+	  "cardSubtype": "title",
+	  "cardName": "Dodonna's Pride",
+	  "displayName": "",
+	  "requirements": [{ "cardNameIncludes": "CR90" }]
+	},
+	"kk": {
+		"isMod": false,
+	  "isUnique": true,
+	  "cost": 2,
+	  "cardType": "upgrade",
+	  "cardSubtype": "title",
+	  "cardName": "Jaina's Light",
+	  "displayName": "",
+	  "requirements": [{ "cardNameIncludes": "CR90" }]
+	},
+	"kl": {
+		"isMod": false,
+	  "isUnique": true,
+	  "cost": 2,
+	  "cardType": "upgrade",
+	  "cardSubtype": "title",
+	  "cardName": "Liberator",
+	  "displayName": "",
+	  "requirements": [{ "cardNameIncludes": "CR90" }],
+		"addsUpgradeSlot": ["fleet command"]
+	},
+	"km": {
+		"isMod": false,
+	  "isUnique": true,
+	  "cost": 3,
+	  "cardType": "upgrade",
+	  "cardSubtype": "title",
+	  "cardName": "Tantive IV",
+	  "displayName": "",
+	  "requirements": [{ "cardNameIncludes": "CR90" }]
+	},
+	"kn": {
+		"isMod": false,
+	  "isUnique": true,
+	  "cost": 2,
+	  "cardType": "upgrade",
+	  "cardSubtype": "title",
+	  "cardName": "Bright Hope",
+	  "displayName": "",
+	  "requirements": [{ "cardNameIncludes": "GR-75" }]
+	},
+	"ko": {
+		"isMod": false,
+	  "isUnique": true,
+	  "cost": 1,
+	  "cardType": "upgrade",
+	  "cardSubtype": "title",
+	  "cardName": "Quantum Storm",
+	  "displayName": "",
+	  "requirements": [{ "cardNameIncludes": "GR-75" }]
+	},
+	"kp": {
+		"isMod": false,
+	  "isUnique": true,
+	  "cost": 4,
+	  "cardType": "upgrade",
+	  "cardSubtype": "title",
+	  "cardName": "Garel's Honor",
+	  "displayName": "",
+	  "requirements": [{ "cardNameIncludes": "Hammerhead" }]
+	},
+	"kq": {
+		"isMod": false,
+	  "isUnique": false,
+	  "cost": 3,
+	  "cardType": "upgrade",
+	  "cardSubtype": "title",
+	  "cardName": "Task Force Antilles",
+	  "displayName": "",
+	  "requirements": [{ "cardNameIncludes": "Hammerhead" }]
+	},
+	"kr": {
+		"isMod": false,
+	  "isUnique": false,
+	  "cost": 1,
+	  "cardType": "upgrade",
+	  "cardSubtype": "title",
+	  "cardName": "Task Force Organa",
+	  "displayName": "",
+	  "requirements": [{ "cardNameIncludes": "Hammerhead" }]
+	},
+	"ks": {
+		"isMod": false,
+	  "isUnique": true,
+	  "cost": 8,
+	  "cardType": "upgrade",
+	  "cardSubtype": "title",
+	  "cardName": "Foresight",
+	  "displayName": "",
+	  "requirements": [{ "cardNameIncludes": "MC30" }]
+	},
+	"kt": {
+		"isMod": false,
+	  "isUnique": true,
+	  "cost": 8,
+	  "cardType": "upgrade",
+	  "cardSubtype": "title",
+	  "cardName": "Admonition",
+	  "displayName": "",
+	  "requirements": [{ "cardNameIncludes": "MC30" }]
+	},
+	"ku": {
+		"isMod": false,
+	  "isUnique": true,
+	  "cost": 3,
+	  "cardType": "upgrade",
+	  "cardSubtype": "title",
+	  "cardName": "Aspiration",
+	  "displayName": "",
+	  "requirements": [{ "cardNameIncludes": "MC75" }]
+	},
+	"kv": {
+		"isMod": false,
+	  "isUnique": false,
+	  "cost": 5,
+	  "cardType": "upgrade",
+	  "cardSubtype": "title",
+	  "cardName": "Mon Calamari Exodus Fleet",
+	  "displayName": "",
+	  "requirements": [{ "cardNameIncludes": "MC" }]
+	},
+	"kw": {
+		"isMod": false,
+	  "isUnique": true,
+	  "cost": 7,
+	  "cardType": "upgrade",
+	  "cardSubtype": "title",
+	  "cardName": "Profundity",
+	  "displayName": "",
+	  "requirements": [{ "cardNameIncludes": "MC75" }]
+	},
+	"kx": {
+		"isMod": false,
+	  "isUnique": true,
+	  "cost": 5,
+	  "cardType": "upgrade",
+	  "cardSubtype": "title",
+	  "cardName": "Defiance",
+	  "displayName": "",
+	  "requirements": [
+			"OR",
+			{ "cardName": "MC80 Assault Cruiser" },
+			{ "cardName": "MC80 Command Cruiser" }
+		]
+	},
+	"ky": {
+		"isMod": false,
+	  "isUnique": true,
+	  "cost": 7,
+	  "cardType": "upgrade",
+	  "cardSubtype": "title",
+	  "cardName": "Home One",
+	  "displayName": "",
+	  "requirements": [
+			"OR",
+			{ "cardName": "MC80 Assault Cruiser" },
+			{ "cardName": "MC80 Command Cruiser" }
+		]
+	},
+	"kz": {
+		"isMod": false,
+	  "isUnique": true,
+	  "cost": 8,
+	  "cardType": "upgrade",
+	  "cardSubtype": "title",
+	  "cardName": "Independence",
+	  "displayName": "",
+	  "requirements": [
+			"OR",
+			{ "cardName": "MC80 Assault Cruiser" },
+			{ "cardName": "MC80 Command Cruiser" }
+		]
+	},
+	"la": {
+		"isMod": false,
+	  "isUnique": true,
+	  "cost": 4,
+	  "cardType": "upgrade",
+	  "cardSubtype": "title",
+	  "cardName": "Endeavor",
+	  "displayName": "",
+	  "requirements": [
+			"OR",
+			{ "cardName": "MC80 Battle Cruiser" },
+			{ "cardName": "MC80 Star Cruiser" }
+		]
+	},
+	"lb": {
+		"isMod": false,
+	  "isUnique": true,
+	  "cost": 3,
+	  "cardType": "upgrade",
+	  "cardSubtype": "title",
+	  "cardName": "Liberty",
+	  "displayName": "",
+	  "requirements": [
+			"OR",
+			{ "cardName": "MC80 Battle Cruiser" },
+			{ "cardName": "MC80 Star Cruiser" }
+		]
+	},
+	"lc": {
+		"isMod": false,
+	  "isUnique": true,
+	  "cost": 8,
+	  "cardType": "upgrade",
+	  "cardSubtype": "title",
+	  "cardName": "Mon Karren",
+	  "displayName": "",
+	  "requirements": [
+			"OR",
+			{ "cardName": "MC80 Battle Cruiser" },
+			{ "cardName": "MC80 Star Cruiser" }
+		]
+	},
+	"ld": {
+		"isMod": false,
+	  "isUnique": true,
+	  "cost": 8,
+	  "cardType": "upgrade",
+	  "cardSubtype": "title",
+	  "cardName": "Redemption",
+	  "displayName": "",
+	  "requirements": [{ "cardNameIncludes": "Nebulon" }]
+	},
+	"le": {
+		"isMod": false,
+	  "isUnique": true,
+	  "cost": 7,
+	  "cardType": "upgrade",
+	  "cardSubtype": "title",
+	  "cardName": "Salvation",
+	  "displayName": "",
+	  "requirements": [{ "cardNameIncludes": "Nebulon" }]
+	},
+	"lf": {
+		"isMod": false,
+	  "isUnique": true,
+	  "cost": 4,
+	  "cardType": "upgrade",
+	  "cardSubtype": "title",
+	  "cardName": "Vanguard",
+	  "displayName": "",
+	  "requirements": [{ "cardNameIncludes": "Nebulon" }],
+		"addsUpgradeSlot": ["weapons team"]
+	},
+	"lg": {
+		"isMod": false,
+	  "isUnique": true,
+	  "cost": 5,
+	  "cardType": "upgrade",
+	  "cardSubtype": "title",
+	  "cardName": "Yavaris",
+	  "displayName": "",
+	  "requirements": [{ "cardNameIncludes": "Nebulon" }]
+	},
+	"lh": {
+		"isMod": false,
+	  "isUnique": true,
+	  "cost": 3,
+	  "cardType": "upgrade",
+	  "cardSubtype": "title",
+	  "cardName": "Phoenix Home",
+	  "displayName": "",
+	  "requirements": [{ "cardNameIncludes": "Pelta" }],
+		"addsUpgradeSlot": ["officer"]
+	},
+	"li": {
+		"isMod": false,
+	  "isUnique": true,
+	  "cost": 6,
+	  "cardType": "upgrade",
+	  "cardSubtype": "title",
+	  "cardName": "Amity",
+	  "displayName": "",
+	  "requirements": [{ "cardName": "Starhawk-class Battleship Mark I" }]
+	},
+	"lj": {
+		"isMod": false,
+	  "isUnique": true,
+	  "cost": 12,
+	  "cardType": "upgrade",
+	  "cardSubtype": "title",
+	  "cardName": "Concord",
+	  "displayName": "",
+	  "requirements": [{ "cardName": "Starhawk-class Battleship Mark I" }]
+	},
+	"lk": {
+		"isMod": false,
+	  "isUnique": true,
+	  "cost": 10,
+	  "cardType": "upgrade",
+	  "cardSubtype": "title",
+	  "cardName": "Unity",
+	  "displayName": "",
+	  "requirements": [{ "cardNameIncludes": "Starhawk" }]
+	},
+	"ll": {
+		"isMod": false,
+	  "isUnique": true,
+	  "cost": 5,
+	  "cardType": "upgrade",
+	  "cardSubtype": "title",
+	  "cardName": "Sa Nalaor",
+	  "displayName": "",
+	  "requirements": [{ "cardNameIncludes": "Munificent" }]
+	},
+	"lm": {
+		"isMod": false,
+	  "isUnique": true,
+	  "cost": 2,
+	  "cardType": "upgrade",
+	  "cardSubtype": "title",
+	  "cardName": "Tide of Progress XII",
+	  "displayName": "",
+	  "requirements": [{ "cardNameIncludes": "Munificent" }]
+	},
+	"ln": {
+		"isMod": false,
+	  "isUnique": true,
+	  "cost": 5,
+	  "cardType": "upgrade",
+	  "cardSubtype": "title",
+	  "cardName": "Foreman's Labor",
+	  "displayName": "",
+	  "requirements": [{ "cardNameIncludes": "Hardcell" }]
+	},
+	"lo": {
+		"isMod": false,
+	  "isUnique": true,
+	  "cost": 6,
+	  "cardType": "upgrade",
+	  "cardSubtype": "title",
+	  "cardName": "Beast of Burden",
+	  "displayName": "",
+	  "requirements": [{ "cardNameIncludes": "Hardcell" }]
+	},
+	"lp": {
+		"isMod": false,
+	  "isUnique": false,
+	  "cost": 3,
+	  "cardType": "upgrade",
+	  "cardSubtype": "support team",
+	  "cardName": "Auxiliary Shields Team",
+	  "displayName": "",
+	  "requirements": []
+	},
+	"lq": {
+		"isMod": false,
+	  "isUnique": false,
+	  "cost": 8,
+	  "cardType": "upgrade",
+	  "cardSubtype": "support team",
+	  "cardName": "Engine Techs",
+	  "displayName": "",
+	  "requirements": []
+	},
+	"lr": {
+		"isMod": false,
+	  "isUnique": false,
+	  "cost": 5,
+	  "cardType": "upgrade",
+	  "cardSubtype": "support team",
+	  "cardName": "Engineering Team",
+	  "displayName": "",
+	  "requirements": []
+	},
+	"ls": {
+		"isMod": false,
+	  "isUnique": false,
+	  "cost": 3,
+	  "cardType": "upgrade",
+	  "cardSubtype": "support team",
+	  "cardName": "Fighter Coordination Team",
+	  "displayName": "",
+	  "requirements": []
+	},
+	"lt": {
+		"isMod": false,
+	  "isUnique": false,
+	  "cost": 1,
+	  "cardType": "upgrade",
+	  "cardSubtype": "support team",
+	  "cardName": "Medical Team",
+	  "displayName": "",
+	  "requirements": []
+	},
+	"lu": {
+		"isMod": false,
+	  "isUnique": false,
+	  "cost": 4,
+	  "cardType": "upgrade",
+	  "cardSubtype": "support team",
+	  "cardName": "Nav Team",
+	  "displayName": "",
+	  "requirements": []
+	},
+	"lv": {
+		"isMod": false,
+	  "isUnique": false,
+	  "cost": 6,
+	  "cardType": "upgrade",
+	  "cardSubtype": "support team",
+	  "cardName": "Projection Experts",
+	  "displayName": "",
+	  "requirements": []
+	},
+	"lw": {
+		"isMod": false,
+	  "isUnique": true,
+	  "cost": 6,
+	  "cardType": "upgrade",
+	  "cardSubtype": "weapons team",
+	  "cardName": "Caitken and Shollan",
+	  "displayName": "",
+	  "requirements": [{ "faction": "rebels" }]
+	},
+	"lx": {
+		"isMod": false,
+	  "isUnique": false,
+	  "cost": 6,
+	  "cardType": "upgrade",
+	  "cardSubtype": "weapons team",
+	  "cardName": "Gunnery Chief Varnillian",
+	  "displayName": "",
+	  "requirements": [{ "faction": "empire" }]
+	},
+	"ly": {
+		"isMod": false,
+	  "isUnique": false,
+	  "cost": 2,
+	  "cardType": "upgrade",
+	  "cardSubtype": "weapons team",
+	  "cardName": "Fire-Control Team",
+	  "displayName": "",
+	  "requirements": []
+	},
+	"lz": {
+		"isMod": false,
+	  "isUnique": false,
+	  "cost": 6,
+	  "cardType": "upgrade",
+	  "cardSubtype": "weapons team",
+	  "cardName": "Flight Controllers",
+	  "displayName": "",
+	  "requirements": []
+	},
+	"ma": {
+		"isMod": false,
+	  "isUnique": false,
+	  "cost": 7,
+	  "cardType": "upgrade",
+	  "cardSubtype": "weapons team",
+	  "cardName": "Gunnery Team",
+	  "displayName": "",
+	  "requirements": []
+	},
+	"mb": {
+		"isMod": false,
+	  "isUnique": false,
+	  "cost": 4,
+	  "cardType": "upgrade",
+	  "cardSubtype": "weapons team",
+	  "cardName": "Local Fire Control",
+	  "displayName": "",
+	  "requirements": []
+	},
+	"mc": {
+		"isMod": false,
+	  "isUnique": false,
+	  "cost": 6,
+	  "cardType": "upgrade",
+	  "cardSubtype": "weapons team",
+	  "cardName": "Ordnance Experts",
+	  "displayName": "",
+	  "requirements": []
+	},
+	"md": {
+		"isMod": false,
+	  "isUnique": false,
+	  "cost": 4,
+	  "cardType": "upgrade",
+	  "cardSubtype": "weapons team",
+	  "cardName": "Ruthless Strategists",
+	  "displayName": "",
+	  "requirements": []
+	},
+	"me": {
+		"isMod": false,
+	  "isUnique": false,
+	  "cost": 5,
+	  "cardType": "upgrade",
+	  "cardSubtype": "weapons team",
+	  "cardName": "Sensor Team",
+	  "displayName": "",
+	  "requirements": []
+	},
+	"mf": {
+		"isMod": false,
+	  "isUnique": false,
+	  "cost": 5,
+	  "cardType": "upgrade",
+	  "cardSubtype": "weapons team",
+	  "cardName": "Veteran Gunners",
+	  "displayName": "",
+	  "requirements": []
+	},
+	"mg": {
+		"isMod": false,
+	  "isUnique": false,
+	  "cost": 5,
+	  "cardType": "upgrade",
+	  "cardSubtype": "weapons team",
+	  "cardName": "Weapon Battery Techs",
+	  "displayName": "",
+	  "requirements": []
+	},
+	"mh": {
+		"isMod": false,
+	  "isUnique": false,
+	  "cost": 6,
+	  "cardType": "upgrade",
+	  "cardSubtype": "defensive retrofit",
+	  "cardName": "Advanced Projectors",
+	  "displayName": "",
+	  "requirements": []
+	},
+	"mi": {
+		"isMod": false,
+	  "isUnique": false,
+	  "cost": 5,
+	  "cardType": "upgrade",
+	  "cardSubtype": "defensive retrofit",
+	  "cardName": "Cluster Bombs",
+	  "displayName": "",
+	  "requirements": []
+	},
+	"mj": {
+		"isMod": false,
+	  "isUnique": false,
+	  "cost": 7,
+	  "cardType": "upgrade",
+	  "cardSubtype": "defensive retrofit",
+	  "cardName": "Early Warning System",
+	  "displayName": "",
+	  "requirements": []
+	},
+	"mk": {
+		"isMod": false,
+	  "isUnique": false,
+	  "cost": 7,
+	  "cardType": "upgrade",
+	  "cardSubtype": "defensive retrofit",
+	  "cardName": "Electronic Countermeasures",
+	  "displayName": "",
+	  "requirements": []
+	},
+	"ml": {
+		"isMod": true,
+	  "isUnique": false,
+	  "cost": 8,
+	  "cardType": "upgrade",
+	  "cardSubtype": "defensive retrofit",
+	  "cardName": "Redundant Shields",
+	  "displayName": "",
+	  "requirements": []
+	},
+	"mm": {
+		"isMod": false,
+	  "isUnique": false,
+	  "cost": 5,
+	  "cardType": "upgrade",
+	  "cardSubtype": "defensive retrofit",
+	  "cardName": "Reinforced Blast Doors",
+	  "displayName": "",
+	  "requirements": []
+	},
+	"mn": {
+		"isMod": true,
+	  "isUnique": false,
+	  "cost": 5,
+	  "cardType": "upgrade",
+	  "cardSubtype": "offensive retrofit",
+	  "cardName": "Advanced Transponder Net",
+	  "displayName": "",
+	  "requirements": []
+	},
+	"mo": {
+		"isMod": false,
+	  "isUnique": false,
+	  "cost": 4,
+	  "cardType": "upgrade",
+	  "cardSubtype": "offensive retrofit",
+	  "cardName": "Boosted Comms",
+	  "displayName": "",
+	  "requirements": []
+	},
+	"mp": {
+		"isMod": false,
+	  "isUnique": false,
+	  "cost": 3,
+	  "cardType": "upgrade",
+	  "cardSubtype": "offensive retrofit",
+	  "cardName": "Disposable Capacitors",
+	  "displayName": "",
+	  "requirements": [
+			"OR",
+			{ "cardSubtype": "flotilla" },
+			[
+				"OR",
+				{ "cardSubtype": "small" },
+				{ "cardSubtype": "medium" }
+			]
+		]
+	},
+	"mq": {
+		"isMod": true,
+	  "isUnique": false,
+	  "cost": 0,
+	  "cardType": "upgrade",
+	  "cardSubtype": "offensive retrofit",
+	  "cardName": "Flag Bridge",
+	  "displayName": "",
+	  "requirements": [
+			"AND",
+			[
+				"OR",
+				{ "cardSubtype": "medium" },
+				{ "cardSubtype": "large" }
+			],
+			{ "isFlagship": true }
+		],
+		"addsUpgradeSlot": ["fleet command"]
+	},
+	"mr": {
+		"isMod": true,
+	  "isUnique": false,
+	  "cost": 5,
+	  "cardType": "upgrade",
+	  "cardSubtype": "offensive retrofit",
+	  "cardName": "Hardened Bulkheads",
+	  "displayName": "",
+	  "requirements": []
+	},
+	"ms": {
+		"isMod": true,
+	  "isUnique": false,
+	  "cost": 6,
+	  "cardType": "upgrade",
+	  "cardSubtype": "offensive retrofit",
+	  "cardName": "Phylon Q7 Tractor Beams",
+	  "displayName": "",
+	  "requirements": []
+	},
+	"mt": {
+		"isMod": false,
+	  "isUnique": false,
+	  "cost": 5,
+	  "cardType": "upgrade",
+	  "cardSubtype": "offensive retrofit",
+	  "cardName": "Point-Defense Reroute",
+	  "displayName": "",
+	  "requirements": []
+	},
+	"mu": {
+		"isMod": false,
+	  "isUnique": false,
+	  "cost": 4,
+	  "cardType": "upgrade",
+	  "cardSubtype": "offensive retrofit",
+	  "cardName": "Proximity Mines",
+	  "displayName": "",
+	  "requirements": []
+	},
+	"mv": {
+		"isMod": false,
+	  "isUnique": false,
+	  "cost": 5,
+	  "cardType": "upgrade",
+	  "cardSubtype": "offensive retrofit",
+	  "cardName": "Quad Laser Turrets",
+	  "displayName": "",
+	  "requirements": []
+	},
+	"mw": {
+		"isMod": false,
+	  "isUnique": false,
+	  "cost": 6,
+	  "cardType": "upgrade",
+	  "cardSubtype": "offensive retrofit",
+	  "cardName": "Rapid Launch Bays",
+	  "displayName": "",
+	  "requirements": []
+	},
+	"mx": {
+		"isMod": false,
+	  "isUnique": false,
+	  "cost": 3,
+	  "cardType": "upgrade",
+	  "cardSubtype": "offensive retrofit",
+	  "cardName": "Reserve Hangar Deck",
+	  "displayName": "",
+	  "requirements": []
+	},
+	"my": {
+		"isMod": false,
+	  "isUnique": false,
+	  "cost": 9,
+	  "cardType": "upgrade",
+	  "cardSubtype": "ion cannons",
+	  "cardName": "Heavy Ion Emplacements",
+	  "displayName": "",
+	  "requirements": []
+	},
+	"mz": {
+		"isMod": true,
+	  "isUnique": false,
+	  "cost": 8,
+	  "cardType": "upgrade",
+	  "cardSubtype": "ion cannons",
+	  "cardName": "High-Capacity Ion Turbines",
+	  "displayName": "",
+	  "requirements": []
+	},
+	"na": {
+		"isMod": false,
+	  "isUnique": false,
+	  "cost": 5,
+	  "cardType": "upgrade",
+	  "cardSubtype": "ion cannons",
+	  "cardName": "Ion Cannon Batteries",
+	  "displayName": "",
+	  "requirements": []
+	},
+	"nb": {
+		"isMod": false,
+	  "isUnique": false,
+	  "cost": 6,
+	  "cardType": "upgrade",
+	  "cardSubtype": "ion cannons",
+	  "cardName": "Leading Shots",
+	  "displayName": "",
+	  "requirements": []
+	},
+	"nc": {
+		"isMod": false,
+	  "isUnique": false,
+	  "cost": 2,
+	  "cardType": "upgrade",
+	  "cardSubtype": "ion cannons",
+	  "cardName": "MS-1 Ion Cannons",
+	  "displayName": "",
+	  "requirements": []
+	},
+	"nd": {
+		"isMod": false,
+	  "isUnique": false,
+	  "cost": 10,
+	  "cardType": "upgrade",
+	  "cardSubtype": "ion cannons",
+	  "cardName": "NK-7 Ion Cannons",
+	  "displayName": "",
+	  "requirements": []
+	},
+	"ne": {
+		"isMod": false,
+	  "isUnique": false,
+	  "cost": 8,
+	  "cardType": "upgrade",
+	  "cardSubtype": "ion cannons",
+	  "cardName": "Overload Pulse",
+	  "displayName": "",
+	  "requirements": []
+	},
+	"nf": {
+		"isMod": false,
+	  "isUnique": false,
+	  "cost": 5,
+	  "cardType": "upgrade",
+	  "cardSubtype": "ion cannons",
+	  "cardName": "SW-7 Ion Batteries",
+	  "displayName": "",
+	  "requirements": []
+	},
+	"ng": {
+		"isMod": false,
+	  "isUnique": false,
+	  "cost": 5,
+	  "cardType": "upgrade",
+	  "cardSubtype": "ordnance",
+	  "cardName": "Assault Concussion Missiles",
+	  "displayName": "",
+	  "requirements": []
+	},
+	"nh": {
+		"isMod": false,
+	  "isUnique": false,
+	  "cost": 4,
+	  "cardType": "upgrade",
+	  "cardSubtype": "ordnance",
+	  "cardName": "Assault Proton Torpedoes",
+	  "displayName": "",
+	  "requirements": []
+	},
+	"ni": {
+		"isMod": true,
+	  "isUnique": false,
+	  "cost": 13,
+	  "cardType": "upgrade",
+	  "cardSubtype": "ordnance",
+	  "cardName": "Expanded Launchers",
+	  "displayName": "",
+	  "requirements": []
+	},
+	"nj": {
+		"isMod": false,
+	  "isUnique": false,
+	  "cost": 4,
+	  "cardType": "upgrade",
+	  "cardSubtype": "ordnance",
+	  "cardName": "External Racks",
+	  "displayName": "",
+	  "requirements": []
+	},
+	"nk": {
+		"isMod": false,
+	  "isUnique": false,
+	  "cost": 3,
+	  "cardType": "upgrade",
+	  "cardSubtype": "ordnance",
+	  "cardName": "Flechette Torpedoes",
+	  "displayName": "",
+	  "requirements": []
+	},
+	"nl": {
+		"isMod": false,
+	  "isUnique": false,
+	  "cost": 3,
+	  "cardType": "upgrade",
+	  "cardSubtype": "ordnance",
+	  "cardName": "Ordnance Pods",
+	  "displayName": "",
+	  "requirements": [
+			"OR",
+			{ "cardSubtype": "medium" },
+			{ "cardSubtype": "large" }
+		]
+	},
+	"nm": {
+		"isMod": true,
+	  "isUnique": false,
+	  "cost": 8,
+	  "cardType": "upgrade",
+	  "cardSubtype": "ordnance",
+	  "cardName": "Rapid Reload",
+	  "displayName": "",
+	  "requirements": []
+	},
+	"nn": {
+		"isMod": false,
+	  "isUnique": false,
+	  "cost": 2,
+	  "cardType": "upgrade",
+	  "cardSubtype": "ordnance",
+	  "cardName": "Wide-Area Barrage",
+	  "displayName": "",
+	  "requirements": []
+	},
+	"no": {
+		"isMod": true,
+	  "isUnique": false,
+	  "cost": 5,
+	  "cardType": "upgrade",
+	  "cardSubtype": "turbolasers",
+	  "cardName": "Dual Turbolaser Turrets",
+	  "displayName": "",
+	  "requirements": []
+	},
+	"np": {
+		"isMod": true,
+	  "isUnique": false,
+	  "cost": 10,
+	  "cardType": "upgrade",
+	  "cardSubtype": "turbolasers",
+	  "cardName": "Enhanced Armament",
+	  "displayName": "",
+	  "requirements": []
+	},
+	"nq": {
+		"isMod": true,
+	  "isUnique": false,
+	  "cost": 8,
+	  "cardType": "upgrade",
+	  "cardSubtype": "turbolasers",
+	  "cardName": "H9 Turbolasers",
+	  "displayName": "",
+	  "requirements": []
+	},
+	"nr": {
+		"isMod": false,
+	  "isUnique": false,
+	  "cost": 4,
+	  "cardType": "upgrade",
+	  "cardSubtype": "turbolasers",
+	  "cardName": "Heavy Fire Zone",
+	  "displayName": "",
+	  "requirements": []
+	},
+	"ns": {
+		"isMod": false,
+	  "isUnique": false,
+	  "cost": 6,
+	  "cardType": "upgrade",
+	  "cardSubtype": "turbolasers",
+	  "cardName": "Heavy Turbolaser Turrets",
+	  "displayName": "",
+	  "requirements": []
+	},
+	"nt": {
+		"isMod": false,
+	  "isUnique": false,
+	  "cost": 7,
+	  "cardType": "upgrade",
+	  "cardSubtype": "turbolasers",
+	  "cardName": "Linked Turbolaser Turrets",
+	  "displayName": "",
+	  "requirements": []
+	},
+	"nu": {
+		"isMod": true,
+	  "isUnique": false,
+	  "cost": 5,
+	  "cardType": "upgrade",
+	  "cardSubtype": "turbolasers",
+	  "cardName": "Quad Battery Turrets",
+	  "displayName": "",
+	  "requirements": []
+	},
+	"nv": {
+		"isMod": true,
+	  "isUnique": false,
+	  "cost": 10,
+	  "cardType": "upgrade",
+	  "cardSubtype": "turbolasers",
+	  "cardName": "Quad Turbolaser Cannons",
+	  "displayName": "",
+	  "requirements": []
+	},
+	"nw": {
+		"isMod": true,
+	  "isUnique": false,
+	  "cost": 6,
+	  "cardType": "upgrade",
+	  "cardSubtype": "turbolasers",
+	  "cardName": "Slaved Turrets",
+	  "displayName": "",
+	  "requirements": []
+	},
+	"nx": {
+		"isMod": true,
+	  "isUnique": false,
+	  "cost": 9,
+	  "cardType": "upgrade",
+	  "cardSubtype": "turbolasers",
+	  "cardName": "Spinal Armament",
+	  "displayName": "",
+	  "requirements": []
+	},
+	"ny": {
+		"isMod": false,
+	  "isUnique": false,
+	  "cost": 7,
+	  "cardType": "upgrade",
+	  "cardSubtype": "turbolasers",
+	  "cardName": "Turbolaser Reroute Circuits",
+	  "displayName": "",
+	  "requirements": []
+	},
+	"nz": {
+		"isMod": false,
+	  "isUnique": false,
+	  "cost": 6,
+	  "cardType": "upgrade",
+	  "cardSubtype": "turbolasers",
+	  "cardName": "XI7 Turbolasers",
+	  "displayName": "",
+	  "requirements": []
+	},
+	"oa": {
+		"isMod": false,
+	  "isUnique": false,
+	  "cost": 5,
+	  "cardType": "upgrade",
+	  "cardSubtype": "turbolasers",
+	  "cardName": "XX-9 Turbolasers",
+	  "displayName": "",
+	  "requirements": []
+	},
+	"ob": {},
+	"oc": {},
+	"od": {},
+	"oe": {},
+	"of": {},
+	"og": {},
+	"oh": {},
+	"oi": {},
+	"oj": {},
+	"ok": {},
+	"ol": {},
+	"om": {},
+	"on": {},
+	"oo": {},
+	"op": {},
+	"oq": {},
+	"or": {},
+	"os": {},
+	"ot": {},
+	"ou": {},
+	"ov": {},
+	"ow": {},
+	"ox": {},
+	"oy": {},
+	"oz": {},
+	"pa": {
+		"isMod": false,
+		"isUnique": true,
+		"cost": 5,
+		"cardType": "upgrade",
+		"cardSubtype": "fleet command",
+		"cardName": "All Fighters, Follow Me!",
+		"displayName": "",
+		"requirements": []
+	},
+	"pb": {
+		"isMod": false,
+		"isUnique": true,
+		"cost": 5,
+		"cardType": "upgrade",
+		"cardSubtype": "fleet command",
+		"cardName": "Entrapment Formation!",
+		"displayName": "",
+		"requirements": []
+	},
+	"pc": {
+		"isMod": false,
+		"isUnique": true,
+		"cost": 5,
+		"cardType": "upgrade",
+		"cardSubtype": "fleet command",
+		"cardName": "Intensify Firepower!",
+		"displayName": "",
+		"requirements": []
+	},
+	"pd": {
+		"isMod": false,
+		"isUnique": true,
+		"cost": 5,
+		"cardType": "upgrade",
+		"cardSubtype": "fleet command",
+		"cardName": "Shields to Maximum!",
+		"displayName": "",
+		"requirements": []
+	},
+	"pe": {
+		"isMod": false,
+		"isUnique": true,
+		"cost": 5,
+		"cardType": "upgrade",
+		"cardSubtype": "fleet command",
+		"cardName": "Take Evasive Action!",
+		"displayName": "",
+		"requirements": []
+	},
+	"pf": {
+		"isMod": false,
+		"isUnique": true,
+		"cost": 4,
+		"cardType": "upgrade",
+		"cardSubtype": "fleet support",
+		"cardName": "Repair Crews",
+		"displayName": "",
+		"requirements": []
+	},
+	"pg": {
+		"isMod": false,
+		"isUnique": true,
+		"cost": 7,
+		"cardType": "upgrade",
+		"cardSubtype": "fleet support",
+		"cardName": "Slicer Tools",
+		"displayName": "",
+		"requirements": []
+	},
+	"ph": {
+		"isMod": false,
+		"isUnique": true,
+		"cost": 8,
+		"cardType": "upgrade",
+		"cardSubtype": "fleet support",
+		"cardName": "Bomber Command Center",
+		"displayName": "",
+		"requirements": []
+	},
+	"pi": {
+		"isMod": false,
+		"isUnique": true,
+		"cost": 2,
+		"cardType": "upgrade",
+		"cardSubtype": "fleet support",
+		"cardName": "Comms Net",
+		"displayName": "",
+		"requirements": []
+	},
+	"pj": {
+		"isMod": false,
+		"isUnique": true,
+		"cost": 2,
+		"cardType": "upgrade",
+		"cardSubtype": "fleet support",
+		"cardName": "Jamming Field",
+		"displayName": "",
+		"requirements": []
+	},
+	"pk": {
+		"isMod": false,
+		"isUnique": true,
+		"cost": 8,
+		"cardType": "upgrade",
+		"cardSubtype": "experimental retrofit",
+		"cardName": "G-8 Experimental Projector",
+		"displayName": "",
+		"requirements": []
+	},
+	"pl": {
+		"isMod": false,
+		"isUnique": true,
+		"cost": 2,
+		"cardType": "upgrade",
+		"cardSubtype": "experimental retrofit",
+		"cardName": "Grav Shift Reroute",
+		"displayName": "",
+		"requirements": []
+	},
+	"pm": {
+		"isMod": false,
+		"isUnique": false,
+		"cost": 2,
+		"cardType": "upgrade",
+		"cardSubtype": "experimental retrofit",
+		"cardName": "G7-X Grav Well Projector",
+		"displayName": "",
+		"requirements": []
+	},
+	"pn": {
+		"isMod": false,
+		"isUnique": false,
+		"cost": 5,
+		"cardType": "upgrade",
+		"cardSubtype": "experimental retrofit",
+		"cardName": "Targeting Scrambler",
+		"displayName": "",
+		"requirements": []
+	},
+	"po": {
+		"isMod": false,
+		"isUnique": false,
+		"cost": 10,
+		"cardType": "upgrade",
+		"cardSubtype": "super weapon",
+		"cardName": "Magnite Crystal Tractor Beam Array",
+		"displayName": "Magnite Tractor Beam",
+		"requirements": [{ "cardNameIncludes": "Starhawk" }]
+	},
+	"pp": {
+		"isMod": false,
+		"isUnique": false,
+		"cost": 5,
+		"cardType": "upgrade",
+		"cardSubtype": "super weapon",
+		"cardName": "Orbital Bombardment Particle Cannons",
+		"displayName": "",
+		"requirements": [{ "cardNameIncludes": "Onager" }]
+	},
+	"pq": {
+		"isMod": false,
+		"isUnique": false,
+		"cost": 7,
+		"cardType": "upgrade",
+		"cardSubtype": "super weapon",
+		"cardName": "Superheavy Composite Beam Turbolasers",
+		"displayName": "",
+		"requirements": [{ "cardNameIncludes": "Onager" }]
+	},
+	"pr": {
+		"isMod": false,
+		"isUnique": false,
+		"cost": 4,
+		"cardType": "upgrade",
+		"cardSubtype": "support team",
+		"cardName": "Battle Droid Reserves",
+		"displayName": "",
+		"requirements": [{ "Droid": true }]
+	},
+	"ps": {
+		"isMod": false,
+		"isUnique": false,
+		"cost": 3,
+		"cardType": "upgrade",
+		"cardSubtype": "offensive retrofit",
+		"cardName": "Hyperwave Signal Boost",
+		"displayName": "",
+		"requirements": [{ "faction": "separatists" }]
+	},
+	"pt": {
+		"isMod": false,
+		"isUnique": false,
+		"cost": 4,
+		"cardType": "upgrade",
+		"cardSubtype": "defensive retrofit",
+		"cardName": "Reactive Gunnery",
+		"displayName": "",
+		"requirements": []
+	},
+	"pu": {
+		"isMod": false,
+		"isUnique": false,
+		"cost": 8,
+		"cardType": "upgrade",
+		"cardSubtype": "turbolasers",
+		"cardName": "Swivel-Mount Batteries",
+		"displayName": "",
+		"requirements": [
+			"OR",
+			{ "faction": "separatists" },
+			{ "faction": "republic" }
+		]
+	},
+	"pv": {
+		"isMod": false,
+		"isUnique": false,
+		"cost": 3,
+		"cardType": "upgrade",
+		"cardSubtype": "fleet support",
+		"cardName": "Munitions Resupply",
+		"displayName": "",
+		"requirements": []
+	},
+	"pw": {
+		"isMod": false,
+		"isUnique": false,
+		"cost": 3,
+		"cardType": "upgrade",
+		"cardSubtype": "fleet support",
+		"cardName": "Parts Resupply",
+		"displayName": "",
+		"requirements": []
+	},
+	"px": {
+		"isMod": false,
+		"isUnique": false,
+		"cost": 4,
+		"cardType": "upgrade",
+		"cardSubtype": "weapons team",
+		"cardName": "Clone Gunners",
+		"displayName": "",
+		"requirements": [{ "Clone": true }]
+	},
+	"py": {
+		"isMod": false,
+		"isUnique": false,
+		"cost": 3,
+		"cardType": "upgrade",
+		"cardSubtype": "offensive retrofit",
+		"cardName": "Hyperspace Rings",
+		"displayName": "",
+		"requirements": [{ "faction": "republic" }]
+	},
+	"pz": {}
 }));
 
 export default cards;
-// next is BK
+// missing key: CQ

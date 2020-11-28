@@ -4,7 +4,14 @@ import DataContext from 'context/DataContext';
 import factions from 'constants/factions';
 import {
   addShip,
-  addSquadron
+  copyShip,
+  deleteShip,
+  equipUpgrade,
+  unequipUpgrade,
+  addSquadron,
+  decrementSquadronCount,
+  addObjective,
+  removeObjective
 } from 'constants/listOperations';
 
 const ListContext = createContext();
@@ -22,6 +29,7 @@ export function ListProvider({
   const [rightPaneWidth, setRightPaneWidth] = useState(0);
   const [cardPaneFilter, setCardPaneFilter] = useState({ action: 'DISPLAY_LIST' });
   useEffect(() => {
+    resetCardPaneFilter();
     if (slug in factions) {
       if (listHash) {
 
@@ -63,12 +71,59 @@ export function ListProvider({
     setIsModalOpen(false);
     setModalContent();
   }
+  const resetCardPaneFilter = () => setCardPaneFilter({ action: 'DISPLAY_LIST' });
   const handleAddShip = id => setCurrentList({ ...addShip(currentList, id) });
+  const handleCopyShip = index => setCurrentList({ ...copyShip(currentList, index) });
+  const handleDeleteShip = index => setCurrentList({ ...deleteShip(currentList, index) });
   const handleAddSquadron = id => setCurrentList({ ...addSquadron(currentList, id) });
+  const handleDecrementSquadron = index => setCurrentList({ ...decrementSquadronCount(currentList, index) });
+  const handleAddUpgrade = (id, shipIndex, upgradeIndex) => setCurrentList({ ...equipUpgrade(currentList, shipIndex, upgradeIndex, id) });
+  const handleRemoveUpgrade = (shipIndex, upgradeIndex) => setCurrentList({ ...unequipUpgrade(currentList, shipIndex, upgradeIndex) });
+  const handleAddObjective = (id, objectiveType) => setCurrentList({ ...addObjective(currentList, objectiveType, id) });
+  const handleRemoveObjective = (objectiveType) => setCurrentList({ ...removeObjective(currentList, objectiveType) });
+  const reorderShips = (startIndex, endIndex) => {
+    function reorder(arr) {
+      const result = Array.from(arr);
+      const [removed] = result.splice(startIndex, 1);
+      result.splice(endIndex, 0, removed);
+      return result;
+    }
+    currentList.ships = reorder(
+      currentList.ships, startIndex, endIndex
+    );
+    currentList.shipHashes = reorder(
+      currentList.shipHashes, startIndex, endIndex
+    );
+    setCurrentList({ ...currentList });
+  }
+  const reorderSquadrons = (startIndex, endIndex) => {
+    function reorder(arr) {
+      const result = Array.from(arr);
+      const [removed] = result.splice(startIndex, 1);
+      result.splice(endIndex, 0, removed);
+      return result;
+    }
+    currentList.squadrons = reorder(
+      currentList.squadrons, startIndex, endIndex
+    );
+    currentList.squadronHashes = reorder(
+      currentList.squadronHashes, startIndex, endIndex
+    );
+    setCurrentList({ ...currentList });
+  }
   const listProps = {
     currentList,
+    reorderShips,
+    reorderSquadrons,
     handleAddShip,
-    handleAddSquadron
+    handleCopyShip,
+    handleDeleteShip,
+    handleAddSquadron,
+    handleDecrementSquadron,
+    handleAddUpgrade,
+    handleRemoveUpgrade,
+    handleAddObjective,
+    handleRemoveObjective
   };
   const modalProps = {
     handleOpenModal,
@@ -81,6 +136,7 @@ export function ListProvider({
     width,
     cardPaneFilter,
     setCardPaneFilter,
+    resetCardPaneFilter,
     leftPaneWidth,
     rightPaneWidth,
     setLeftPaneWidth,

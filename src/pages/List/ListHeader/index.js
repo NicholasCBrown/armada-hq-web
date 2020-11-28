@@ -24,6 +24,10 @@ function ListHeader() {
     num += ship.count;
     return num;
   }, 0);
+  const numSquadActivations = currentList.squadrons.reduce((num, squad) => {
+    num += squad.count;
+    return num
+  }, 0);
   return (
     <div id="list-header" className={classes.container}>
       <div className={classes.item}>
@@ -34,6 +38,7 @@ function ListHeader() {
       <div className={classes.item}>
         <TitleField
           activations={numActivations}
+          squadActivations={numSquadActivations}
           title={currentList.title}
           handleChange={e => {
             e.persist();

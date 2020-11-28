@@ -1,3 +1,4 @@
+import _ from 'lodash';
 import cards from 'constants/cards';
 
 function sortIds(ids) {
@@ -17,16 +18,86 @@ function deleteItem(items, i) {
   return items.slice(0, i).concat(items.slice(i + 1, items.length))
 }
 
-function getEligibleSquadronIds(list) {
-  const validSquadIds = [];
-  const invalidSquadIds = [];
+function removeObjective(list, objectiveType) {
+  if (objectiveType === 'assault') list.assaultObjective = '';
+  else if (objectiveType === 'defensive') list.defensiveObjective = '';
+  else if (objectiveType === 'navigation') list.navigationObjective = '';
+  return list;
+}
+
+function addObjective(list, id, objectiveType) {
+  if (objectiveType === 'assault') list.assaultObjective = id;
+  else if (objectiveType === 'defensive') list.defensiveObjective = id;
+  else if (objectiveType === 'navigation') list.navigationObjective = id;
+  return list;
+}
+
+function getEligibleNavigationObjectives(list) {
+  const validObjectiveIds = [];
   const cardsById = Object.keys(cards);
 
   for (let i = 0; i < cardsById.length; i++) {
     const id = cardsById[i];
     const card = cards[id];
+    if (card.cardType !== 'objective') continue;
+    if (card.cardSubtype !== 'navigation') continue;
+    validObjectiveIds.push(id);
+  }
+
+  return [sortIds(validObjectiveIds), []];
+}
+
+function getEligibleDefensiveObjectives(list) {
+  const validObjectiveIds = [];
+  const cardsById = Object.keys(cards);
+
+  for (let i = 0; i < cardsById.length; i++) {
+    const id = cardsById[i];
+    const card = cards[id];
+    if (card.cardType !== 'objective') continue;
+    if (card.cardSubtype !== 'defense') continue;
+    validObjectiveIds.push(id);
+  }
+
+  return [sortIds(validObjectiveIds), []];
+}
+
+function getEligibleAssaultObjectives(list) {
+  const validObjectiveIds = [];
+  const cardsById = Object.keys(cards);
+
+  for (let i = 0; i < cardsById.length; i++) {
+    const id = cardsById[i];
+    const card = cards[id];
+    if (card.cardType !== 'objective') continue;
+    if (card.cardSubtype !== 'assault') continue;
+    validObjectiveIds.push(id);
+  }
+
+  return [sortIds(validObjectiveIds), []];
+}
+
+function getEligibleSquadronIds(list) {
+  const validSquadIds = [];
+  const invalidSquadIds = [];
+  const cardsById = Object.keys(cards);
+
+  let milfCount = 0;
+  let slaveCount = 0;
+  for (let i = 0; i < list.squadrons.length; i++) {
+    const squadron = list.squadrons[i];
+    if (squadron.squadronId === 'cu' || squadron.squadronId === 'co') milfCount++;
+    if (squadron.squadronId === 'du' || squadron.squadronId === 'ed') slaveCount++;
+  }
+
+  for (let i = 0; i < cardsById.length; i++) {
+    const id = cardsById[i];
+    const card = cards[id];
     if (card.cardType !== 'squadron') continue;
-    if (card.faction !== list.faction) invalidSquadIds.push(id);
+    if (list.uniques.includes(card.cardName)) continue;
+    if ((id === 'cu' || id === 'co') && milfCount > 0) invalidSquadIds.push(id);
+    else if ((id === 'du' || id === 'ed') && slaveCount > 0) invalidSquadIds.push(id);
+    else if (card.faction !== list.faction) invalidSquadIds.push(id);
     else validSquadIds.push(id);
   }
 
@@ -43,6 +114,7 @@ function getEligibleShipIds(list) {
     const id = cardsById[i];
     const card = cards[id];
     if (card.cardType !== 'ship') continue;
+    if (card.cost < 0) continue;
     if (card.faction !== list.faction) invalidShipIds.push(id);
     else if (card.cardSubtype === 'huge') validHugeShipIds.push(id);
     else validShipIds.push(id);
@@ -54,31 +126,153 @@ function getEligibleShipIds(list) {
   ];
 }
 
+function isRequirementsMet(requirements, shipCard) {
+  if (requirements instanceof Array) {
+    const operator = requirements[0];
+    if (operator instanceof Object) {
+      if ('cardNameIncludes' in operator) {
+        return shipCard.cardName.includes(operator.cardNameIncludes);
+      } else return _.isMatch(shipCard, operator);
+    } else if (operator === 'NOT') {
+      let operand = requirements[1];
+      if (operand instanceof Array) {
+        // requiremtns: ['NOT', [...]]
+        operand = isRequirementsMet(operand, shipCard);
+      } else {
+        return !_.isMatch(shipCard, operand);
+      }
+    } else if (operator === 'AND' || operator === 'OR') {
+      let leftOperand = requirements[1];
+      let rightOperand = requirements[2];
+      if (leftOperand instanceof Array) {
+        leftOperand = isRequirementsMet(leftOperand, shipCard);
+      } else if (leftOperand instanceof Object) {
+        leftOperand = _.isMatch(shipCard, leftOperand);
+      }
+      if (rightOperand instanceof Array) {
+        rightOperand = isRequirementsMet(rightOperand, shipCard);
+      } else if (rightOperand instanceof Object) {
+        rightOperand = _.isMatch(shipCard, rightOperand);
+      }
+      if (operator === 'OR') {
+        // requirements: ['OR', {cardName: 'Whatever'}, {cardType: 'Whatever'}]
+        return leftOperand || rightOperand
+      } else { // operator === 'AND'
+        // requirements: ['AND', {cardName: 'Whatever'}, {cardType: 'Whatever'}]
+        return leftOperand && rightOperand;
+      }
+    } else {
+      /// emptty array of requirements
+      return true;
+    }
+  } else {
+    return _.isMatch(shipCard, requirements)
+  }
+}
+
+function getEligibleUpgradeIds(list, shipIndex, upgradeIndex) {
+  const validUpgradeIds = [];
+  const invalidUpgradeIds = [];
+
+  const cardsById = Object.keys(cards);
+  const shipCard = cards[list.ships[shipIndex].shipId];
+  const ship = list.ships[shipIndex];
+  const upgradeType = ship.upgradeBar[upgradeIndex];
+
+  for (let i = 0; i < cardsById.length; i++) {
+    const id = cardsById[i];
+    const card = cards[id];
+    if (card.cardType !== 'upgrade') continue;
+    if (!card.cardSubtype.includes(upgradeType)) continue;
+    if (card.cost < 0) continue;
+    if (list.uniques.includes(card.displayName ? card.displayName : card.cardName)) continue;
+    if (ship.equippedUpgrades.includes(id)) continue;
+    if (ship.extraEquippedUpgrades.includes(id)) continue;
+    if (card.faction && shipCard.faction !== card.faction) continue;
+    if (card.isMod && ship.numMods > 0) { invalidUpgradeIds.push(id); continue; }
+
+    for (let j = 0; j < ship.upgradeBar; j++) shipCard[ship.upgradeBar[j]] = true;
+
+    for (let j = 0; j < shipCard.tags.length; j++) shipCard[shipCard.tags[j]] = true;
+
+    for (let j = 0; j < ship.equippedUpgrades.length; j++) {
+      const id = ship.equippedUpgrades[j];
+      if (id && cards[id].cardSubtype === 'commander') {
+        shipCard.isFlagship = true;
+        break;
+      } else shipCard.isFlagship = false;
+    }
+
+    if (isRequirementsMet(card.requirements, shipCard)) validUpgradeIds.push(id);
+    else invalidUpgradeIds.push(id);
+  }
+
+  return [
+    sortIds(validUpgradeIds),
+    sortIds(invalidUpgradeIds)
+  ];
+}
+
+function createShipHash(ship) {
+  let hash = ship.shipId;
+  for (let i = 0; i < ship.equippedUpgrades.length; i++) {
+    const upgradeId = ship.equippedUpgrades[i];
+    if (upgradeId) hash += upgradeId;
+    else hash += '0';
+  }
+  for (let i = 0; i < ship.extraEquippedUpgrades.length; i++) {
+    const upgradeId = ship.extraEquippedUpgrades[i];
+    if (upgradeId) hash += upgradeId;
+    else hash += '0';
+  }
+  return hash;
+}
+
+function equipUpgrade(list, shipIndex, upgradeIndex, upgradeId) {
+  const ship = list.ships[shipIndex];
+  const upgradeCard = cards[upgradeId];
+  ship.equippedUpgrades[upgradeIndex] = upgradeId;
+  if (upgradeCard.addsUpgradeSlot) {
+    ship.upgradeBar.push(upgradeCard.addsUpgradeSlot[0]);
+    ship.extraEquippedUpgrades.push(null);
+  }
+  if (upgradeCard.isMod) ship.numMods++;
+  if (upgradeCard.cardSubtype === 'commander') list.commander = upgradeId;
+  list.shipHashes[list.shipHashes.indexOf(ship.shipHash)] = createShipHash(ship);
+  ship.shipHash = createShipHash(ship);
+  list.pointTotal -= ship.totalCost;
+  ship.totalCost = cards[ship.shipId].cost;
+  for (let i = 0; i < ship.equippedUpgrades.length; i++) {
+    const id = ship.equippedUpgrades[i];
+    if (id) ship.totalCost += cards[id].cost;
+  }
+  list.pointTotal += ship.totalCost;
+  return list;
+}
+
+function unequipUpgrade(list, shipIndex, upgradeIndex) {
+  return list;
+}
+
 function addShip(list, shipId) {
   const card = cards[shipId];
   list.pointTotal += card.cost;
-  const index = list.shipHashes.indexOf(shipId);
-
-  if (index > -1) {
-    list.ships[index].count++;
-  } else {
-    const ship = {
-      shipId,
-      count: 1,
-      hasUniques: false,
-      totalCost: card.cost,
-      shipHash: shipId,
-      upgradeBar: [...card.upgradeBar],
-      equippedUpgrades: [],
-      extraEquippedUpgrades: []
-    };
-    for (let i = 0; i < card.upgradeBar.length; i++) {
-      ship.equippedUpgrades.push(null);
-      ship.extraEquippedUpgrades.push(null);
-    }
-    list.ships.push(ship);
-    list.shipHashes.push(shipId);
+  const ship = {
+    shipId,
+    count: 1,
+    hasUniques: false,
+    totalCost: card.cost,
+    upgradeBar: [...card.upgradeBar],
+    equippedUpgrades: [],
+    extraEquippedUpgrades: [],
+    numMods: 0
+  };
+  for (let i = 0; i < card.upgradeBar.length; i++) {
+    ship.equippedUpgrades.push(null);
   }
+  ship.shipHash = createShipHash(ship);
+  list.ships.push(ship);
+  list.shipHashes.push(ship.shipHash);
 
   return list;
 }
@@ -88,10 +282,12 @@ function addSquadron(list, squadronId) {
   list.pointTotal += card.cost;
   const index = list.squadronHashes.indexOf(squadronId);
 
+  if (card.isUnique) list.uniques.push(card.cardName);
+
   if (index > -1) {
     list.squadrons[index].count++;
   } else {
-    const squad = { squadronId, count: 1 };
+    const squad = { squadronId, cost: card.cost, count: 1 };
     list.squadrons.push(squad);
     list.squadronHashes.push(squadronId);
   }
@@ -99,25 +295,48 @@ function addSquadron(list, squadronId) {
   return list;
 }
 
-function decrementShipCount(list, shipIndex) {
+function copyShip(list, shipIndex) {
+  return list;
+}
+
+function deleteShip(list, shipIndex) {
   const ship = list.ships[shipIndex];
 
-  list.pointTotal -= ship.totalCost;
-  if (ship.count === 1) {
-    list.shipHashes = deleteItem(list.shipHashes, shipIndex);
-    list.ships = deleteItem(list.ships, shipIndex);
-  } else {
-    list.ships[shipIndex].count -= 1;
+  ship.equippedUpgrades.forEach(id => {
+    if (!id) return;
+    const card = cards[id];
+    const name = card.displayName ? card.displayName : card.cardName;
+    if (list.uniques.includes(name)) list.uniques = deleteItem(list.uniques, list.uniques.indexOf(name));
+  });
+
+  ship.extraEquippedUpgrades.forEach(id => {
+    if (!id) return;
+    const card = cards[id];
+    const name = card.displayName ? card.displayName : card.cardName;
+    if (list.uniques.includes(name)) list.uniques = deleteItem(list.uniques, list.uniques.indexOf(name));
+  });
+
+  if (list.commander) {
+    const card = cards[list.commander];
+    const name = card.displayName ? card.displayName : card.cardName;
+    if (!list.uniques.includes(name)) list.commander = '';
   }
+
+  list.pointTotal -= ship.totalCost;
+  list.shipHashes = deleteItem(list.shipHashes, shipIndex);
+  list.ships = deleteItem(list.ships, shipIndex);
 
   return list;
 }
 
 function decrementSquadronCount(list, squadronIndex) {
   const squad = list.squadrons[squadronIndex];
-
-  list.pointTotal -= cards[squad.squadronId].cost;
+  const card = cards[squad.squadronId];
+  list.pointTotal -= card.cost;
   if (squad.count === 1) {
+    if (list.uniques.includes(card.cardName)) {
+      list.uniques = deleteItem(list.uniques, list.uniques.indexOf(card.cardName));
+    }
     list.squadronHashes = deleteItem(list.squadronHashes, squadronIndex);
     list.squadrons = deleteItem(list.squadrons, squadronIndex);
   } else {
@@ -129,9 +348,18 @@ function decrementSquadronCount(list, squadronIndex) {
 
 export {
   addShip,
+  copyShip,
+  deleteShip,
   addSquadron,
-  decrementShipCount,
+  equipUpgrade,
+  unequipUpgrade,
   decrementSquadronCount,
+  addObjective,
+  removeObjective,
   getEligibleShipIds,
-  getEligibleSquadronIds
+  getEligibleUpgradeIds,
+  getEligibleSquadronIds,
+  getEligibleAssaultObjectives,
+  getEligibleDefensiveObjectives,
+  getEligibleNavigationObjectives
 };

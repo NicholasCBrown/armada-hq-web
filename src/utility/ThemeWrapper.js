@@ -7,7 +7,7 @@ import themes from 'constants/themes';
 function ThemeWrapper({ children, themeColor }) {
   const theme = responsiveFontSizes(createMuiTheme({
     typography: { useNextVariants: true },
-    palette: themes.palettes[themeColor]
+    palette: themes.palettes.dark
   }));
   return (
     <MuiThemeProvider theme={theme}>

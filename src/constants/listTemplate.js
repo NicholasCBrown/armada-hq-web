@@ -5,7 +5,9 @@ const listTemplate = {
   pointTotal: 0,
   ships: [],
   squadrons: [],
-  objectiveCards: [],
+  assaultObjective: '',
+  defensiveObjective: '',
+  navigationObjective: '',
   uniques: [],
   shipHashes: [],
   squadronHashes: []

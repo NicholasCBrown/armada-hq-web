@@ -4,6 +4,7 @@ import {
   IconButton,
   Collapse,
   Button,
+  Avatar,
   Card,
   CardMedia,
   CardActions,
@@ -15,6 +16,7 @@ import { ExpandMore as ExpandMoreIcon } from '@material-ui/icons';
 import CardChip from 'common/CardChip';
 import urls from 'constants/urls';
 import cards from 'constants/cards';
+import upgradeTypes from 'constants/upgradeTypes';
 
 const useStyles = makeStyles(theme => ({
   expand: {
@@ -35,8 +37,8 @@ const useStyles = makeStyles(theme => ({
   shipImage: { height: 342, width: 200 },
   hugeShipImage: { height: 342, width: 400 },
   squadronImage: { height: 280, width: 200 },
-  upgradeImage: { height: 310, width: 200 },
-  objectiveImage: { height: 420, width: 300 }
+  upgradeImage: { height: 232.5, width: 150 },
+  objectiveImage: { height: 280, width: 200 }
 }));
 
 function ArmadaCard({ isSelected, cardId, handleClick, handleCardZoom }) {
@@ -66,11 +68,27 @@ function ArmadaCard({ isSelected, cardId, handleClick, handleCardZoom }) {
               { [classes.upgradeImage]: cardType === 'upgrade' },
               { [classes.hugeShipImage]: cardSubtype === 'huge' },
               { [classes.squadronImage]: cardType === 'squadron' },
+              { [classes.objectiveImage]: cardType === 'objective' },
             )}
           />
         </CardActionArea>
+        {cardType === 'ship' && (
+          <CardActions disableSpacing>
+            {cards[cardId].upgradeBar.map((upgradeType, i) => {
+              if (upgradeType === 'title' || upgradeType === 'commander') return null;
+              return (
+                <Avatar
+                  key={`${upgradeType}_${i}`}
+                  alt={upgradeType}
+                  src={upgradeTypes[upgradeType].icon}
+                  style={{ width: 24, height: 24, marginRight: 4 }}
+                />
+              );
+            })}
+          </CardActions>
+        )}
         <CardActions disableSpacing>
-          {cost && <CardChip type="points" size="small" value={cost} />}
+          {'cost' in cards[cardId] && <CardChip type="points" size="small" value={cost} />}
           <IconButton
             size="small"
             aria-expanded={isExpanded}

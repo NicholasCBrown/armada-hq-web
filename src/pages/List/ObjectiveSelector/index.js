@@ -12,7 +12,8 @@ function ObjectiveSelector() {
   const {
     currentList,
     setCardPaneFilter,
-    handleRemoveBattle
+    handleCardZoom,
+    handleRemoveObjective
   } = useContext(ListContext);
   const assaultTheme = createMuiTheme({
     palette: { primary: { main: '#9A4252' } }
@@ -33,37 +34,73 @@ function ObjectiveSelector() {
       }}
     >
       <ThemeProvider theme={assaultTheme}>
-        <Chip
-          clickable
-          size={chipSize}
-          color="primary"
-          label="Assault Objective"
-          icon={<AddIcon />}
-          style={{ marginBottom: 4, marginRight: 4 }}
-          onClick={() => setCardPaneFilter({ action: 'ADD_ASSAULT_OBJECTIVE' })}
-        />
+        {currentList.assaultObjective ? (
+          <Chip
+            clickable
+            size={chipSize}
+            color="primary"
+            label={cards[currentList.assaultObjective].cardName}
+            style={{ marginBottom: 4, marginRight: 4 }}
+            onClick={() => handleCardZoom(currentList.assaultObjective)}
+            onDelete={() => handleRemoveObjective('assault')}
+          />
+        ) : (
+          <Chip
+            clickable
+            size={chipSize}
+            color="primary"
+            label="Assault Objective"
+            icon={<AddIcon />}
+            style={{ marginBottom: 4, marginRight: 4 }}
+            onClick={() => setCardPaneFilter({ action: 'ADD_ASSAULT_OBJECTIVE' })}
+          />
+        )}
       </ThemeProvider>
       <ThemeProvider theme={defensiveTheme}>
-        <Chip
-          clickable
-          size={chipSize}
-          color="primary"
-          label="Defensive Objective"
-          icon={<AddIcon />}
-          style={{ marginBottom: 4, marginRight: 4 }}
-          onClick={() => setCardPaneFilter({ action: 'ADD_DEFENSIVE_OBJECTIVE' })}
-        />
+        {currentList.defensiveObjective ? (
+          <Chip
+            clickable
+            size={chipSize}
+            color="primary"
+            label={cards[currentList.defensiveObjective].cardName}
+            style={{ marginBottom: 4, marginRight: 4 }}
+            onClick={() => handleCardZoom(currentList.defensiveObjective)}
+            onDelete={() => handleRemoveObjective('defensive')}
+          />
+        ) : (
+          <Chip
+            clickable
+            size={chipSize}
+            color="primary"
+            label="Defensive Objective"
+            icon={<AddIcon />}
+            style={{ marginBottom: 4, marginRight: 4 }}
+            onClick={() => setCardPaneFilter({ action: 'ADD_DEFENSIVE_OBJECTIVE' })}
+          />
+        )}
       </ThemeProvider>
       <ThemeProvider theme={navigationTheme}>
-        <Chip
-          clickable
-          size={chipSize}
-          color="primary"
-          label="Navigation Objective"
-          icon={<AddIcon />}
-          style={{ marginBottom: 4, marginRight: 4 }}
-          onClick={() => setCardPaneFilter({ action: 'ADD_NAVIGATION_OBJECTIVE' })}
-        />
+        {currentList.navigationObjective ? (
+          <Chip
+            clickable
+            size={chipSize}
+            color="primary"
+            label={cards[currentList.navigationObjective].cardName}
+            style={{ marginBottom: 4, marginRight: 4 }}
+            onClick={() => handleCardZoom(currentList.navigationObjective)}
+            onDelete={() => handleRemoveObjective('navigation')}
+          />
+        ) : (
+          <Chip
+            clickable
+            size={chipSize}
+            color="primary"
+            label="Navigation Objective"
+            icon={<AddIcon />}
+            style={{ marginBottom: 4, marginRight: 4 }}
+            onClick={() => setCardPaneFilter({ action: 'ADD_NAVIGATION_OBJECTIVE' })}
+          />
+        )}
       </ThemeProvider>
     </div>
   );

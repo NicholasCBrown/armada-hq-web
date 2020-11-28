@@ -9,6 +9,8 @@ import ShipSelector from './ShipSelector';
 import SquadronSelector from './SquadronSelector';
 import ObjectiveSelector from './ObjectiveSelector';
 import ListDisplay from './ListDisplay';
+import ListShips from './ListShips';
+import ListSquadrons from './ListSquadrons';
 import CardSelector from './CardSelector';
 
 function ListLayout() {
@@ -50,10 +52,12 @@ function ListLayout() {
           <div style={{ marginTop: 8 }} />
         </div>
         <ShipSelector />
-        ListShips
+        <div style={{ marginBottom: 4 }} />
+        <ListShips />
         <Divider style={{ marginBottom: 4 }} />
         <SquadronSelector />
-        ListSquads
+        <div style={{ marginBottom: 4 }} />
+        <ListSquadrons />
         <Divider style={{ marginBottom: 4 }} />
         <ObjectiveSelector />
       </div>

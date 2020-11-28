@@ -13,7 +13,11 @@ const useStyles = makeStyles({
 
 function SquadronSelector() {
   const classes = useStyles();
-  const { setCardPaneFilter } = useContext(ListContext);
+  const { currentList, setCardPaneFilter } = useContext(ListContext);
+  let points = 0;
+  currentList.squadrons.forEach(squadron => {
+    points += squadron.cost * squadron.count;
+  });
   return (
     <div className={classes.container}>
       <Button
@@ -23,7 +27,7 @@ function SquadronSelector() {
         style={{ width: 420 }}
         onClick={() => setCardPaneFilter({ action: 'ADD_SQUADRONS' })}
       >
-        Add Squadrons (0)
+        Add Squadrons ({points})
       </Button>
     </div>
   );

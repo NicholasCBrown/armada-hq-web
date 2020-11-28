@@ -13,7 +13,11 @@ const useStyles = makeStyles({
 
 function ShipSelector() {
   const classes = useStyles();
-  const { setCardPaneFilter } = useContext(ListContext);
+  const { currentList, setCardPaneFilter } = useContext(ListContext);
+  let points = 0;
+  currentList.ships.forEach(ship => {
+    points += ship.totalCost;
+  });
   return (
     <div className={classes.container}>
       <Button
@@ -23,7 +27,7 @@ function ShipSelector() {
         style={{ width: 420 }}
         onClick={() => setCardPaneFilter({ action: 'ADD_SHIPS' })}
       >
-        Add Ships (0)
+        Add Ships ({points})
       </Button>
     </div>
   );

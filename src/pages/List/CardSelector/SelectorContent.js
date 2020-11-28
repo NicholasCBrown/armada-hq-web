@@ -11,7 +11,11 @@ import { ExpandMore as ExpandMoreIcon } from '@material-ui/icons';
 import ListContext from 'context/ListContext';
 import {
   getEligibleShipIds,
-  getEligibleSquadronIds
+  getEligibleUpgradeIds,
+  getEligibleSquadronIds,
+  getEligibleAssaultObjectives,
+  getEligibleDefensiveObjectives,
+  getEligibleNavigationObjectives
 } from 'constants/listOperations';
 import ArmadaCard from 'common/ArmadaCard';
 
@@ -59,32 +63,67 @@ function CollapsedContent({ children, isExpanded }) {
 function SelectorContent({
   currentList,
   cardPaneFilter,
-  setCardPaneFilter,
   handleCardZoom
 }) {
   const classes = useStyles();
   const [isExpanded, setIsExpanded] = useState(false);
   const {
+    resetCardPaneFilter,
     handleAddShip,
-    handleAddSquadron
+    handleAddSquadron,
+    handleAddUpgrade,
+    handleAddObjective
   } = useContext(ListContext);
-  const handleExpandClick = () => setIsExpanded(!isExpanded);
+  // const handleExpandClick = () => setIsExpanded(!isExpanded);
 
   let validIds = [], invalidIds = [];
 
   let handleAdd;
 
-  switch (cardPaneFilter.action) {
-    case 'ADD_SHIPS':
-      [validIds, invalidIds] = getEligibleShipIds(currentList);
-      handleAdd = handleAddShip;
-      break;
-    case 'ADD_SQUADRONS':
-      [validIds, invalidIds] = getEligibleSquadronIds(currentList);
-      handleAdd = handleAddSquadron;
-      break;
-    default:
-      break;
+  try {
+    switch (cardPaneFilter.action) {
+      case 'ADD_SHIPS':
+        [validIds, invalidIds] = getEligibleShipIds(currentList);
+        handleAdd = handleAddShip;
+        break;
+      case 'ADD_SQUADRONS':
+        [validIds, invalidIds] = getEligibleSquadronIds(currentList);
+        handleAdd = handleAddSquadron;
+        break;
+      case 'ADD_UPGRADES':
+        [validIds, invalidIds] = getEligibleUpgradeIds(currentList, cardPaneFilter.shipIndex, cardPaneFilter.upgradeIndex);
+        handleAdd = (id) => {
+          handleAddUpgrade(id, cardPaneFilter.shipIndex, cardPaneFilter.upgradeIndex);
+          resetCardPaneFilter();
+        }
+        break;
+      case 'ADD_ASSAULT_OBJECTIVE':
+        [validIds, invalidIds] = getEligibleAssaultObjectives(currentList);
+        handleAdd = (id) => {
+          handleAddObjective('assault', id);
+          resetCardPaneFilter();
+        }
+        break;
+      case 'ADD_DEFENSIVE_OBJECTIVE':
+        [validIds, invalidIds] = getEligibleDefensiveObjectives(currentList);
+        handleAdd = (id) => {
+          handleAddObjective('defensive', id);
+          resetCardPaneFilter();
+        }
+        break;
+      case 'ADD_NAVIGATION_OBJECTIVE':
+        [validIds, invalidIds] = getEligibleNavigationObjectives(currentList);
+        handleAdd = (id) => {
+          handleAddObjective('navigation', id);
+          resetCardPaneFilter();
+        }
+        break;
+      default:
+        break;
+    }
+  } catch (err) {
+    console.log(err);
+    resetCardPaneFilter();
   }
 
   return (

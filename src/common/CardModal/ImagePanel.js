@@ -12,7 +12,7 @@ import urls from 'constants/urls';
 
 function ImagePanel({ card }) {
   if (!card) return null;
-  const { cardType, imageName } = card;
+  const { cardType, cardName } = card;
   return (
     <React.Fragment>
       <ExpansionPanel defaultExpanded={true}>
@@ -21,7 +21,7 @@ function ImagePanel({ card }) {
         </ExpansionPanelSummary>
         <ExpansionPanelDetails style={{ padding: '0px 24px 24px' }}>
           <Img
-            src={`${urls.cdn}/${cardType}Cards/${imageName}`}
+            src={`${urls.cdn}/${cardType}Cards/${cardName}.jpeg`}
             loader={<Skeleton variant="rect" width={315} height={225} />}
             style={{ width: '100%' }}
           />
