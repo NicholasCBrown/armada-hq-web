@@ -12,6 +12,7 @@ import ListDisplay from './ListDisplay';
 import ListShips from './ListShips';
 import ListSquadrons from './ListSquadrons';
 import CardSelector from './CardSelector';
+import ListExtras from './ListExtras';
 
 function ListLayout() {
   const { userSettings } = useContext(DataContext);
@@ -62,7 +63,7 @@ function ListLayout() {
         <ObjectiveSelector />
       </div>
       <Divider style={{ marginBottom: 4 }} />
-      ListExtras
+      <ListExtras />
       <div style={{ marginTop: 24 }} />
     </Grid>
   );

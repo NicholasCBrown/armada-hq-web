@@ -4449,7 +4449,7 @@ const cards = JSON.parse(JSON.stringify({
 		"requirements": []
 	},
 	"pu": {
-		"isMod": false,
+		"isMod": true,
 		"isUnique": false,
 		"cost": 8,
 		"cardType": "upgrade",

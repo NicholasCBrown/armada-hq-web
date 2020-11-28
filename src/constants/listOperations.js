@@ -410,6 +410,49 @@ function decrementSquadronCount(list, squadronIndex) {
   return list;
 }
 
+function generateText(list) {
+  let text = `Name: ${list.title}\n`;
+  text += `Faction: ${list.faction}\n`;
+  if (list.commander) {
+    const commanderCard = cards[list.commander];
+    text += `Commander: ${commanderCard.dispalyName ? commanderCard.displayName : commanderCard.cardName}\n\n`;
+  } else text += 'Commander:\n\n';
+  text += `Assault: ${list.assaultObjective}\n`;
+  text += `Defense: ${list.defensiveObjective}\n`;
+  text += `Navigation: ${list.navigationObjective}\n\n`;
+
+  for (let i = 0; i < list.ships.length; i++) {
+    const ship = list.ships[i];
+    const shipCard = cards[ship.shipId];
+    text += `${shipCard.displayName ? shipCard.displayName : shipCard.cardName} (${shipCard.cost})\n`;
+    for (let j = 0; j < ship.equippedUpgrades.length; j++) {
+      const upgradeId = ship.equippedUpgrades[j];
+      if (!upgradeId) continue;
+      const upgradeCard = cards[upgradeId];
+      text += `• ${upgradeCard.displayName ? upgradeCard.displayName : upgradeCard.cardName} (${upgradeCard.cost})\n`;
+    }
+    text += `= ${ship.totalCost}\n\n`;
+  }
+
+  text += 'Squadrons:\n';
+  let squadTotal = 0;
+  for (let i = 0; i < list.squadrons.length; i++) {
+    const squadron = list.squadrons[i];
+    const squadronCard = cards[squadron.squadronId];
+    squadTotal += squadronCard.cost * squadron.count;
+    if (squadron.count > 1) {
+      text += `• ${squadron.count}× ${squadronCard.displayName ? squadronCard.displayName : squadronCard.cardName} (${squadronCard.cost * squadron.count})\n`;
+    } else {
+      text += `• ${squadronCard.displayName ? squadronCard.displayName : squadronCard.cardName} (${squadronCard.cost})\n`;
+    }
+  }
+  text += `= ${squadTotal} Points \n\n`;
+
+  text += `Total Points: ${list.pointTotal}`;
+
+  return text;
+}
+
 export {
   addShip,
   copyShip,
@@ -420,6 +463,7 @@ export {
   decrementSquadronCount,
   addObjective,
   removeObjective,
+  generateText,
   getEligibleShipIds,
   getEligibleUpgradeIds,
   getEligibleSquadronIds,

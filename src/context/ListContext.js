@@ -13,6 +13,7 @@ import {
   addObjective,
   removeObjective
 } from 'constants/listOperations';
+import listTemplate from 'constants/listTemplate';
 
 const ListContext = createContext();
 const httpClient = Axios.create();
@@ -84,6 +85,11 @@ export function ListProvider({
   const handleRemoveUpgrade = (shipIndex, upgradeIndex) => setCurrentList({ ...unequipUpgrade(currentList, shipIndex, upgradeIndex) });
   const handleAddObjective = (id, objectiveType) => setCurrentList({ ...addObjective(currentList, objectiveType, id) });
   const handleRemoveObjective = (objectiveType) => setCurrentList({ ...removeObjective(currentList, objectiveType) });
+  const handleClearList = () => {
+    setCardPaneFilter({ action: 'DISPLAY_LIST' });
+    const newList = JSON.parse(JSON.stringify(listTemplate));
+    setCurrentList({ ...newList, faction: currentList.faction });
+  }
   const reorderShips = (startIndex, endIndex) => {
     function reorder(arr) {
       const result = Array.from(arr);
@@ -126,7 +132,8 @@ export function ListProvider({
     handleAddUpgrade,
     handleRemoveUpgrade,
     handleAddObjective,
-    handleRemoveObjective
+    handleRemoveObjective,
+    handleClearList
   };
   const modalProps = {
     handleOpenModal,
@@ -145,7 +152,6 @@ export function ListProvider({
     setLeftPaneWidth,
     setRightPaneWidth
   };
-  console.log(currentList);
   return (
     <ListContext.Provider
       value={{
