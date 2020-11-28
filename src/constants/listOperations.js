@@ -178,12 +178,30 @@ function getEligibleUpgradeIds(list, shipIndex, upgradeIndex) {
   const shipCard = cards[list.ships[shipIndex].shipId];
   const ship = list.ships[shipIndex];
   const upgradeType = ship.upgradeBar[upgradeIndex];
+  let hasOpenWeaponsTeam = false;
+  let hasOpenOffensiveRetro = false
+
+  for (let i = 0; i < ship.upgradeBar.length; i++) {
+    const type = ship.upgradeBar[i];
+    if (type === 'weapons team' && ship.equippedUpgrades[i] === null)
+      hasOpenWeaponsTeam = true;
+    if (type === 'offensive retrofit' && ship.equippedUpgrades[i] === null)
+      hasOpenOffensiveRetro = true;
+  }
+  const hasBoardingTeamSlotOpen = hasOpenWeaponsTeam && hasOpenOffensiveRetro;
 
   for (let i = 0; i < cardsById.length; i++) {
     const id = cardsById[i];
     const card = cards[id];
     if (card.cardType !== 'upgrade') continue;
-    if (!card.cardSubtype.includes(upgradeType)) continue;
+    if (
+      !card.cardSubtype.includes(upgradeType) &&
+      !(hasBoardingTeamSlotOpen && card.cardSubtype === 'boarding team')
+    ) continue;
+    if (
+      card.cardSubtype === 'boarding team' &&
+      (upgradeType !== 'weapons team' && upgradeType !== 'offensive retrofit')
+    ) continue;
     if (card.cost < 0) continue;
     if (list.uniques.includes(card.displayName ? card.displayName : card.cardName)) continue;
     if (ship.equippedUpgrades.includes(id)) continue;
@@ -283,6 +301,35 @@ function unequipUpgrade(list, shipIndex, upgradeIndex) {
   return list;
 }
 
+function copyShip(list, shipIndex) {
+  const ship = list.ships[shipIndex];
+  const shipCard = cards[ship.shipId];
+  const newShip = {
+    shipId: ship.shipId,
+    count: 1,
+    hasUniques: false,
+    totalCost: shipCard.cost,
+    upgradeBar: [...shipCard.upgradeBar],
+    equippedUpgrades: [],
+    numMods: 0
+  };
+  for (let i = 0; i < shipCard.upgradeBar.length; i++) {
+    newShip.equippedUpgrades.push(null);
+  }
+  newShip.shipHash = createShipHash(ship);
+  list.ships.push(newShip);
+  list.shipHashes.push(ship.shipHash);
+  list.pointTotal += newShip.totalCost;
+
+  for (let i = 0; i < shipCard.upgradeBar.length; i++) {
+    const upgradeId = ship.equippedUpgrades[i];
+    if (!upgradeId || cards[upgradeId].isUnique) continue;
+    list = equipUpgrade(list, list.ships.length - 1, i, upgradeId);
+  }
+
+  return list;
+}
+
 function addShip(list, shipId) {
   const card = cards[shipId];
   list.pointTotal += card.cost;
@@ -320,10 +367,6 @@ function addSquadron(list, squadronId) {
     list.squadronHashes.push(squadronId);
   }
 
-  return list;
-}
-
-function copyShip(list, shipIndex) {
   return list;
 }
 

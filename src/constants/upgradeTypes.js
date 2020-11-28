@@ -12,6 +12,7 @@ import ordnance from 'assets/upgradeTypes/ordnance.jpeg';
 import fleetCommand from 'assets/upgradeTypes/fleetCommand.jpeg';
 import fleetSupport from 'assets/upgradeTypes/fleetSupport.jpeg';
 import superWeapon from 'assets/upgradeTypes/superWeapon.jpeg';
+import boardingTeam from 'assets/upgradeTypes/boardingTeam.jpeg';
 
 const upgradeTypes = {
   commander: {
@@ -69,6 +70,10 @@ const upgradeTypes = {
   'super weapon': {
     name: 'Super Weapon',
     icon: superWeapon
+  },
+  'boarding team': {
+    name: 'Boarding Team',
+    icon: boardingTeam
   }
 };
 

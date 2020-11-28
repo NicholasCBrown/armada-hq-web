@@ -4920,7 +4920,7 @@ const cards = JSON.parse(JSON.stringify({
 		"cost": 6,
 		"cardType": "upgrade",
 		"cardSubtype": "boarding team",
-		"cardName": "Shriv Suurgaav",
+		"cardName": "Shriv Suurgav",
 		"displayName": "",
 		"requirements": [
 			"AND",
