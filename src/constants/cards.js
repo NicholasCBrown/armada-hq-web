@@ -147,7 +147,6 @@ const cards = JSON.parse(JSON.stringify({
 			"officer",
 			"weapons team",
 			"fleet command",
-			"defensive retrofit",
 			"turbolasers",
 			"turbolasers"
 		],
@@ -1176,7 +1175,7 @@ const cards = JSON.parse(JSON.stringify({
 		"faction": "rebels",
 		"cardType": "squadron",
 		"cardSubtype": "Moldy Crow",
-		"cost": -1,
+		"cost": 19,
 		"isAce": true,
 		"isUnique": true,
 		"cardName": "Jan Ors",
@@ -2093,7 +2092,7 @@ const cards = JSON.parse(JSON.stringify({
 		"cost": 36,
 		"isUnique": true,
 		"cardName": "Commander Darth Vader",
-		"displayName": ""
+		"displayName": "Darth Vader"
 	},
 	"gk": {
 		"faction": "empire",
@@ -2101,8 +2100,8 @@ const cards = JSON.parse(JSON.stringify({
 		"cardSubtype": "commander",
 		"cost": 35,
 		"isUnique": true,
-		"cardName": "Emperor Palpatine",
-		"displayName": ""
+		"cardName": "Commander Emperor Palpatine",
+		"displayName": "Emperor Palpatine"
 	},
 	"gl": {
 		"faction": "empire",
@@ -2958,7 +2957,8 @@ const cards = JSON.parse(JSON.stringify({
 	  "cardSubtype": "title",
 	  "cardName": "Radiant VII",
 	  "displayName": "",
-	  "requirements": [{ "cardNameIncludes": "Consular" }]
+	  "requirements": [{ "cardNameIncludes": "Consular" }],
+		"addsUpgradeSlot": ["fleet support"]
 	},
 	"kg": {
 		"isMod": false,
@@ -3998,31 +3998,256 @@ const cards = JSON.parse(JSON.stringify({
 	  "displayName": "",
 	  "requirements": []
 	},
-	"ob": {},
-	"oc": {},
-	"od": {},
-	"oe": {},
-	"of": {},
-	"og": {},
-	"oh": {},
-	"oi": {},
-	"oj": {},
-	"ok": {},
-	"ol": {},
-	"om": {},
-	"on": {},
-	"oo": {},
-	"op": {},
-	"oq": {},
-	"or": {},
-	"os": {},
-	"ot": {},
-	"ou": {},
-	"ov": {},
-	"ow": {},
-	"ox": {},
-	"oy": {},
-	"oz": {},
+	"ob": {
+		"isMod": false,
+		"isUnique": true,
+		"cost": 4,
+		"cardType": "upgrade",
+		"cardSubtype": "officer",
+		"cardName": "Strategic Advisor",
+		"displayName": "",
+		"requirements": [{ "cardSubtype": "large" }]
+	},
+	"oc": {
+		"isMod": false,
+		"isUnique": false,
+		"cost": 2,
+		"cardType": "upgrade",
+		"cardSubtype": "officer",
+		"cardName": "Chart Officer",
+		"displayName": "",
+		"requirements": []
+	},
+	"od": {
+		"isMod": false,
+		"isUnique": false,
+		"cost": 5,
+		"cardType": "upgrade",
+		"cardSubtype": "officer",
+		"cardName": "Damage Control Officer",
+		"displayName": "",
+		"requirements": []
+	},
+	"oe": {
+		"isMod": false,
+		"isUnique": false,
+		"cost": 3,
+		"cardType": "upgrade",
+		"cardSubtype": "officer",
+		"cardName": "Defense Liason",
+		"displayName": "",
+		"requirements": []
+	},
+	"of": {
+		"isMod": false,
+		"isUnique": false,
+		"cost": 6,
+		"cardType": "upgrade",
+		"cardSubtype": "officer",
+		"cardName": "Engineering Captain",
+		"displayName": "",
+		"requirements": []
+	},
+	"og": {
+		"isMod": false,
+		"isUnique": false,
+		"cost": 5,
+		"cardType": "upgrade",
+		"cardSubtype": "officer",
+		"cardName": "Expert Shield Tech",
+		"displayName": "",
+		"requirements": []
+	},
+	"oh": {
+		"isMod": false,
+		"isUnique": false,
+		"cost": 3,
+		"cardType": "upgrade",
+		"cardSubtype": "officer",
+		"cardName": "Flight Commander",
+		"displayName": "",
+		"requirements": []
+	},
+	"oi": {
+		"isMod": false,
+		"isUnique": false,
+		"cost": 7,
+		"cardType": "upgrade",
+		"cardSubtype": "officer",
+		"cardName": "Intel Officer",
+		"displayName": "",
+		"requirements": []
+	},
+	"oj": {
+		"isMod": false,
+		"isUnique": false,
+		"cost": 6,
+		"cardType": "upgrade",
+		"cardSubtype": "officer",
+		"cardName": "Navigation Officer",
+		"displayName": "",
+		"requirements": []
+	},
+	"ok": {
+		"isMod": false,
+		"isUnique": false,
+		"cost": 1,
+		"cardType": "upgrade",
+		"cardSubtype": "officer",
+		"cardName": "Skilled First Officer",
+		"displayName": "",
+		"requirements": []
+	},
+	"ol": {
+		"isMod": false,
+		"isUnique": false,
+		"cost": 4,
+		"cardType": "upgrade",
+		"cardSubtype": "officer",
+		"cardName": "Support Officer",
+		"displayName": "",
+		"requirements": []
+	},
+	"om": {
+		"isMod": false,
+		"isUnique": false,
+		"cost": 6,
+		"cardType": "upgrade",
+		"cardSubtype": "officer",
+		"cardName": "Tactical Expert",
+		"displayName": "",
+		"requirements": []
+	},
+	"on": {
+		"isMod": false,
+		"isUnique": false,
+		"cost": 3,
+		"cardType": "upgrade",
+		"cardSubtype": "officer",
+		"cardName": "Veteran Captain",
+		"displayName": "",
+		"requirements": []
+	},
+	"oo": {
+		"isMod": false,
+		"isUnique": false,
+		"cost": 3,
+		"cardType": "upgrade",
+		"cardSubtype": "officer",
+		"cardName": "Weapons Liason",
+		"displayName": "",
+		"requirements": []
+	},
+	"op": {
+		"isMod": false,
+		"isUnique": false,
+		"cost": 6,
+		"cardType": "upgrade",
+		"cardSubtype": "officer",
+		"cardName": "Wing Commander",
+		"displayName": "",
+		"requirements": []
+	},
+	"oq": {
+		"isMod": false,
+		"isUnique": true,
+		"cost": 10,
+		"cardType": "upgrade",
+		"cardSubtype": "officer",
+		"cardName": "Admiral Chiraneau",
+		"displayName": "",
+		"requirements": [{ "faction": "empire" }]
+	},
+	"or": {
+		"isMod": false,
+		"isUnique": true,
+		"cost": 5,
+		"cardType": "upgrade",
+		"cardSubtype": "officer",
+		"cardName": "Admiral Montferrat",
+		"displayName": "",
+		"requirements": [{ "faction": "empire" }]
+	},
+	"os": {
+		"isMod": false,
+		"isUnique": true,
+		"cost": 2,
+		"cardType": "upgrade",
+		"cardSubtype": "officer",
+		"cardName": "Admiral Ozzel",
+		"displayName": "",
+		"requirements": [{ "faction": "empire" }]
+	},
+	"ot": {
+		"isMod": false,
+		"isUnique": true,
+		"cost": 2,
+		"cardType": "upgrade",
+		"cardSubtype": "officer",
+		"cardName": "Admiral Titus",
+		"displayName": "",
+		"requirements": [{ "faction": "empire" }]
+	},
+	"ou": {
+		"isMod": false,
+		"isUnique": true,
+		"cost": 3,
+		"cardType": "upgrade",
+		"cardSubtype": "officer",
+		"cardName": "Agent Kallus",
+		"displayName": "",
+		"requirements": [{ "faction": "empire" }]
+	},
+	"ov": {
+		"isMod": false,
+		"isUnique": true,
+		"cost": 9,
+		"cardType": "upgrade",
+		"cardSubtype": "officer",
+		"cardName": "Captain Brunson",
+		"displayName": "",
+		"requirements": [{ "faction": "empire" }]
+	},
+	"ow": {
+		"isMod": false,
+		"isUnique": true,
+		"cost": 2,
+		"cardType": "upgrade",
+		"cardSubtype": "officer",
+		"cardName": "Captain Needa",
+		"displayName": "",
+		"requirements": [{ "faction": "empire" }]
+	},
+	"ox": {
+		"isMod": false,
+		"isUnique": true,
+		"cost": 7,
+		"cardType": "upgrade",
+		"cardSubtype": "officer",
+		"cardName": "Commandant Aresko",
+		"displayName": "",
+		"requirements": [{ "faction": "empire" }]
+	},
+	"oy": {
+		"isMod": false,
+		"isUnique": true,
+		"cost": 3,
+		"cardType": "upgrade",
+		"cardSubtype": "officer",
+		"cardName": "Commander Beck",
+		"displayName": "",
+		"requirements": [{ "faction": "empire" }]
+	},
+	"oz": {
+		"isMod": false,
+		"isUnique": true,
+		"cost": 3,
+		"cardType": "upgrade",
+		"cardSubtype": "officer",
+		"cardName": "Commander Gherant",
+		"displayName": "",
+		"requirements": [{ "faction": "empire" }]
+	},
 	"pa": {
 		"isMod": false,
 		"isUnique": true,
@@ -4277,7 +4502,485 @@ const cards = JSON.parse(JSON.stringify({
 		"displayName": "",
 		"requirements": [{ "faction": "republic" }]
 	},
-	"pz": {}
+	"pz": {
+		"isMod": false,
+		"isUnique": true,
+		"cost": 4,
+		"cardType": "upgrade",
+		"cardSubtype": "officer",
+		"cardName": "Rune Haako",
+		"displayName": "",
+		"requirements": [{ "faction": "separatists" }]
+	},
+	"qa": {
+		"isMod": false,
+		"isUnique": true,
+		"cost": 5,
+		"cardType": "upgrade",
+		"cardSubtype": "officer",
+		"cardName": "Wat Tambor",
+		"displayName": "",
+		"requirements": [{ "faction": "separatists" }]
+	},
+	"qb": {
+		"isMod": false,
+		"isUnique": false,
+		"cost": 4,
+		"cardType": "upgrade",
+		"cardSubtype": "officer",
+		"cardName": "T-Series Tactical Droid",
+		"displayName": "",
+		"requirements": [{ "faction": "separatists" }]
+	},
+	"qc": {
+		"isMod": false,
+		"isUnique": true,
+		"cost": 5,
+		"cardType": "upgrade",
+		"cardSubtype": "officer",
+		"cardName": "Clone Captain Zak",
+		"displayName": "",
+		"requirements": [{ "faction": "republic" }]
+	},
+	"qd": {
+		"isMod": false,
+		"isUnique": false,
+		"cost": 4,
+		"cardType": "upgrade",
+		"cardSubtype": "officer",
+		"cardName": "Clone Navigation Officer",
+		"displayName": "",
+		"requirements": [{ "faction": "republic" }]
+	},
+	"qe": {
+		"isMod": false,
+		"isUnique": true,
+		"cost": 7,
+		"cardType": "upgrade",
+		"cardSubtype": "officer",
+		"cardName": "Commander Vanto",
+		"displayName": "",
+		"requirements": [{ "faction": "empire" }]
+	},
+	"qf": {
+		"isMod": false,
+		"isUnique": true,
+		"cost": 4,
+		"cardType": "upgrade",
+		"cardSubtype": "officer",
+		"cardName": "Commander Woldar",
+		"displayName": "",
+		"requirements": [{ "faction": "empire" }]
+	},
+	"qg": {
+		"isMod": false,
+		"isUnique": true,
+		"cost": 1,
+		"cardType": "upgrade",
+		"cardSubtype": "officer",
+		"cardName": "Darth Vader Officer",
+		"displayName": "Darth Vader",
+		"requirements": [{ "faction": "empire" }]
+	},
+	"qh": {
+		"isMod": false,
+		"isUnique": true,
+		"cost": 3,
+		"cardType": "upgrade",
+		"cardSubtype": "officer",
+		"cardName": "Director Isard",
+		"displayName": "",
+		"requirements": [{ "faction": "empire" }]
+	},
+	"qi": {
+		"isMod": false,
+		"isUnique": true,
+		"cost": 8,
+		"cardType": "upgrade",
+		"cardSubtype": "officer",
+		"cardName": "Director Krennic",
+		"displayName": "",
+		"requirements": [{ "faction": "empire" }]
+	},
+	"qj": {
+		"isMod": false,
+		"isUnique": true,
+		"cost": 3,
+		"cardType": "upgrade",
+		"cardSubtype": "officer",
+		"cardName": "Emperor Palpatine",
+		"displayName": "",
+		"requirements": [{ "faction": "empire" }]
+	},
+	"qk": {
+		"isMod": false,
+		"isUnique": true,
+		"cost": 7,
+		"cardType": "upgrade",
+		"cardSubtype": "officer",
+		"cardName": "Governor Pryce",
+		"displayName": "",
+		"requirements": [
+			"AND",
+			{ "faction": "empire" },
+			[
+				"OR",
+				{ "cardSubtype": "medium" },
+				{ "cardSubtype": "large" }
+			]
+		]
+	},
+	"ql": {
+		"isMod": false,
+		"isUnique": true,
+		"cost": 6,
+		"cardType": "upgrade",
+		"cardSubtype": "officer",
+		"cardName": "Iden Versio",
+		"displayName": "",
+		"requirements": [{ "faction": "empire" }]
+	},
+	"qm": {
+		"isMod": false,
+		"isUnique": true,
+		"cost": 7,
+		"cardType": "upgrade",
+		"cardSubtype": "officer",
+		"cardName": "Instructor Goran",
+		"displayName": "",
+		"requirements": [{ "faction": "empire" }]
+	},
+	"qn": {
+		"isMod": false,
+		"isUnique": true,
+		"cost": 2,
+		"cardType": "upgrade",
+		"cardSubtype": "officer",
+		"cardName": "Lira Wessex",
+		"displayName": "",
+		"requirements": [{ "faction": "empire" }]
+	},
+	"qo": {
+		"isMod": false,
+		"isUnique": true,
+		"cost": 2,
+		"cardType": "upgrade",
+		"cardSubtype": "officer",
+		"cardName": "Minister Tua",
+		"displayName": "",
+		"requirements": [
+			"AND",
+			{ "faction": "empire" },
+			[
+				"OR",
+				[
+					"OR",
+					{ "cardSubtype": "small" },
+					{ "cardSubtype": "flotilla" }
+				],
+				[
+					"NOT",
+					{ "defensive retrofit": true }
+				]
+			]
+		],
+		"addsUpgradeSlot": ["defensive retrofit"]
+	},
+	"qp": {
+		"isMod": false,
+		"isUnique": true,
+		"cost": 4,
+		"cardType": "upgrade",
+		"cardSubtype": "officer",
+		"cardName": "Reeva Demesne",
+		"displayName": "",
+		"requirements": [{ "faction": "empire" }]
+	},
+	"qq": {
+		"isMod": false,
+		"isUnique": true,
+		"cost": 5,
+		"cardType": "upgrade",
+		"cardSubtype": "officer",
+		"cardName": "Taskmaster Grint",
+		"displayName": "",
+		"requirements": [{ "faction": "empire" }]
+	},
+	"qr": {
+		"isMod": false,
+		"isUnique": true,
+		"cost": 4,
+		"cardType": "upgrade",
+		"cardSubtype": "officer",
+		"cardName": "The Grand Inquisitor",
+		"displayName": "",
+		"requirements": [{ "faction": "empire" }]
+	},
+	"qs": {
+		"isMod": false,
+		"isUnique": true,
+		"cost": 7,
+		"cardType": "upgrade",
+		"cardSubtype": "officer",
+		"cardName": "Wulff Yularen",
+		"displayName": "",
+		"requirements": [{ "faction": "empire" }]
+	},
+	"qt": {
+		"isMod": false,
+		"isUnique": true,
+		"cost": 2,
+		"cardType": "upgrade",
+		"cardSubtype": "officer",
+		"cardName": "Hondo Ohnaka",
+		"displayName": "",
+		"requirements": []
+	},
+	"qu": {
+		"isMod": false,
+		"isUnique": true,
+		"cost": 10,
+		"cardType": "upgrade",
+		"cardSubtype": "officer",
+		"cardName": "Adar Tallon",
+		"displayName": "",
+		"requirements": [{ "faction": "rebels" }]
+	},
+	"qv": {
+		"isMod": false,
+		"isUnique": true,
+		"cost": 2,
+		"cardType": "upgrade",
+		"cardSubtype": "officer",
+		"cardName": "Ahsoka Tano",
+		"displayName": "",
+		"requirements": [{ "faction": "rebels" }]
+	},
+	"qw": {
+		"isMod": false,
+		"isUnique": true,
+		"cost": 7,
+		"cardType": "upgrade",
+		"cardSubtype": "officer",
+		"cardName": "Bail Organa",
+		"displayName": "",
+		"requirements": [
+			"AND",
+			{ "faction": "rebels" },
+			[
+				"OR",
+				{ "cardSubtype": "medium" },
+				{ "cardSubtype": "large" }
+			]
+		]
+	},
+	"qx": {
+		"isMod": false,
+		"isUnique": true,
+		"cost": 5,
+		"cardType": "upgrade",
+		"cardSubtype": "officer",
+		"cardName": "Captain Rex",
+		"displayName": "",
+		"requirements": [{ "faction": "rebels" }]
+	},
+	"qy": {
+		"isMod": false,
+		"isUnique": true,
+		"cost": 3,
+		"cardType": "upgrade",
+		"cardSubtype": "officer",
+		"cardName": "Ezra Bridger",
+		"displayName": "",
+		"requirements": [{ "faction": "rebels" }]
+	},
+	"qz": {
+		"isMod": false,
+		"isUnique": true,
+		"cost": 3,
+		"cardType": "upgrade",
+		"cardSubtype": "officer",
+		"cardName": "General Draven",
+		"displayName": "",
+		"requirements": [{ "faction": "rebels" }]
+	},
+	"ra": {
+		"isMod": false,
+		"isUnique": true,
+		"cost": 5,
+		"cardType": "upgrade",
+		"cardSubtype": "officer",
+		"cardName": "Kyrsta Agate",
+		"displayName": "",
+		"requirements": [{ "faction": "rebels" }]
+	},
+	"rb": {
+		"isMod": false,
+		"isUnique": true,
+		"cost": 4,
+		"cardType": "upgrade",
+		"cardSubtype": "officer",
+		"cardName": "Lando Calrissian",
+		"displayName": "",
+		"requirements": [{ "faction": "rebels" }]
+	},
+	"rc": {
+		"isMod": false,
+		"isUnique": true,
+		"cost": 3,
+		"cardType": "upgrade",
+		"cardSubtype": "officer",
+		"cardName": "Leia Organa",
+		"displayName": "",
+		"requirements": [{ "faction": "rebels" }]
+	},
+	"rd": {
+		"isMod": false,
+		"isUnique": true,
+		"cost": 7,
+		"cardType": "upgrade",
+		"cardSubtype": "officer",
+		"cardName": "Major Derlin",
+		"displayName": "",
+		"requirements": [{ "faction": "rebels" }]
+	},
+	"re": {
+		"isMod": false,
+		"isUnique": true,
+		"cost": 7,
+		"cardType": "upgrade",
+		"cardSubtype": "officer",
+		"cardName": "Raymus Antilles",
+		"displayName": "",
+		"requirements": [{ "faction": "rebels" }]
+	},
+	"rf": {
+		"isMod": false,
+		"isUnique": true,
+		"cost": 4,
+		"cardType": "upgrade",
+		"cardSubtype": "officer",
+		"cardName": "Sabine Wren",
+		"displayName": "",
+		"requirements": [{ "faction": "rebels" }]
+	},
+	"rg": {
+		"isMod": false,
+		"isUnique": true,
+		"cost": 7,
+		"cardType": "upgrade",
+		"cardSubtype": "officer",
+		"cardName": "Toryn Farr",
+		"displayName": "",
+		"requirements": [{ "faction": "rebels" }]
+	},
+	"rh": {
+		"isMod": false,
+		"isUnique": true,
+		"cost": 5,
+		"cardType": "upgrade",
+		"cardSubtype": "officer",
+		"cardName": "Walex Blissex",
+		"displayName": "",
+		"requirements": [{ "faction": "rebels" }]
+	},
+	"ri": {
+		"isMod": false,
+		"isUnique": true,
+		"cost": 4,
+		"cardType": "upgrade",
+		"cardSubtype": "officer",
+		"cardName": "Wedge Antilles",
+		"displayName": "",
+		"requirements": [{ "faction": "rebels" }]
+	},
+	"rj": {
+		"isMod": false,
+		"isUnique": false,
+		"cost": 2,
+		"cardType": "upgrade",
+		"cardSubtype": "boarding team",
+		"cardName": "Boarding Engineers",
+		"displayName": "",
+		"requirements": [{ "weapons team": true, "offensive retrofit": true }]
+	},
+	"rk": {
+		"isMod": false,
+		"isUnique": false,
+		"cost": 3,
+		"cardType": "upgrade",
+		"cardSubtype": "boarding team",
+		"cardName": "Boarding Troopers",
+		"displayName": "",
+		"requirements": [{ "weapons team": true, "offensive retrofit": true }]
+	},
+	"rl": {
+		"isMod": false,
+		"isUnique": true,
+		"cost": 6,
+		"cardType": "upgrade",
+		"cardSubtype": "boarding team",
+		"cardName": "Shriv Suurgaav",
+		"displayName": "",
+		"requirements": [
+			"AND",
+			{ "faction": "rebels" },
+			{ "weapons team": true, "offensive retrofit": true }
+		]
+	},
+	"rm": {
+		"isMod": false,
+		"isUnique": true,
+		"cost": 5,
+		"cardType": "upgrade",
+		"cardSubtype": "boarding team",
+		"cardName": "Cham Syndulla",
+		"displayName": "",
+		"requirements": [
+			"AND",
+			{ "faction": "rebels" },
+			{ "weapons team": true, "offensive retrofit": true }
+		]
+	},
+	"rn": {
+		"isMod": false,
+		"isUnique": true,
+		"cost": 4,
+		"cardType": "upgrade",
+		"cardSubtype": "boarding team",
+		"cardName": "Jyn Erso",
+		"displayName": "",
+		"requirements": [
+			"AND",
+			{ "faction": "rebels" },
+			{ "weapons team": true, "offensive retrofit": true }
+		]
+	},
+	"ro": {
+		"isMod": false,
+		"isUnique": false,
+		"cost": 3,
+		"cardType": "upgrade",
+		"cardSubtype": "boarding team",
+		"cardName": "Darth Vader",
+		"displayName": "",
+		"requirements": [
+			"AND",
+			{ "faction": "empire" },
+			{ "weapons team": true, "offensive retrofit": true }
+		]
+	},
+	"rp": {},
+	"rq": {},
+	"rr": {},
+	"rs": {},
+	"rt": {},
+	"ru": {},
+	"rv": {},
+	"rw": {},
+	"rx": {},
+	"ry": {},
+	"rz": {}
 }));
 
 export default cards;

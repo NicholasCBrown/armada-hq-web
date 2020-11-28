@@ -35,20 +35,6 @@ function ShipUpgrades({ ship, shipIndex, handleCardZoom }) {
       );
     }
   }
-  for (let i = 0; i < ship.extraEquippedUpgrades.length; i++) {
-    if (ship.extraEquippedUpgrades[i]) {
-      const upgradeId = ship.extraEquippedUpgrades[i];
-      upgradeChips.push(
-        <UpgradeChip
-          key={upgradeId}
-          upgradeId={upgradeId}
-          upgradeIndex={i}
-          ship={ship}
-          shipIndex={shipIndex}
-        />
-      );
-    }
-  }
 
   return (
     <div style={{ flex: 'display', flexFlow: 'row wrap', alignItems: 'center' }}>

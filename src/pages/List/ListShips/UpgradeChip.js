@@ -28,17 +28,15 @@ function UpgradeAvatar({ card, handleClick }) {
 function UpgradeChip({ upgradeId, upgradeIndex, ship, shipIndex }) {
   const {
     handleCardZoom,
-    handleRemoveUpgrade,
-    handleRemoveCommander
+    handleRemoveUpgrade
   } = useContext(ListContext);
   const card = cards[upgradeId];
-  const handleDelete = () => {};
-  // const handleDelete = () => handleRemoveUpgrade(shipIndex, upgradeIndex);
+  const handleDelete = () => handleRemoveUpgrade(shipIndex, upgradeIndex);
   return (
     <Chip
       size="medium"
       avatar={<UpgradeAvatar card={card} handleClick={() => handleCardZoom(upgradeId)} />}
-      label={card.displayName ? card.displayName : card.cardName}
+      label={`${card.displayName ? card.displayName : card.cardName} (${card.cost})`}
       style={{ marginRight: 4, marginBottom: 3, height: 'auto' }}
       onDelete={handleDelete}
     />

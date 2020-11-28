@@ -74,7 +74,10 @@ export function ListProvider({
   const resetCardPaneFilter = () => setCardPaneFilter({ action: 'DISPLAY_LIST' });
   const handleAddShip = id => setCurrentList({ ...addShip(currentList, id) });
   const handleCopyShip = index => setCurrentList({ ...copyShip(currentList, index) });
-  const handleDeleteShip = index => setCurrentList({ ...deleteShip(currentList, index) });
+  const handleDeleteShip = index => {
+    setCardPaneFilter({ action: 'DISPLAY_LIST' });
+    setCurrentList({ ...deleteShip(currentList, index) });
+  }
   const handleAddSquadron = id => setCurrentList({ ...addSquadron(currentList, id) });
   const handleDecrementSquadron = index => setCurrentList({ ...decrementSquadronCount(currentList, index) });
   const handleAddUpgrade = (id, shipIndex, upgradeIndex) => setCurrentList({ ...equipUpgrade(currentList, shipIndex, upgradeIndex, id) });

@@ -10,10 +10,9 @@ function RowDisplay({ ship, faction, handleCardZoom }) {
     );
   }
   ship.equippedUpgrades.forEach((id, i) => {
+    if (!id) return;
     upgradeCards.push(
-      <div key={`${id}_${i}`}>
-        {cards.displayName ? cards.displayName : cards.cardName}
-      </div>
+      <CardImage key={`${id}_${i}`} id={id} handleClick={() => handleCardZoom(id)} />
     );
   });
   return (

@@ -187,11 +187,10 @@ function getEligibleUpgradeIds(list, shipIndex, upgradeIndex) {
     if (card.cost < 0) continue;
     if (list.uniques.includes(card.displayName ? card.displayName : card.cardName)) continue;
     if (ship.equippedUpgrades.includes(id)) continue;
-    if (ship.extraEquippedUpgrades.includes(id)) continue;
     if (card.faction && shipCard.faction !== card.faction) continue;
     if (card.isMod && ship.numMods > 0) { invalidUpgradeIds.push(id); continue; }
 
-    for (let j = 0; j < ship.upgradeBar; j++) shipCard[ship.upgradeBar[j]] = true;
+    for (let j = 0; j < ship.upgradeBar.length; j++) shipCard[ship.upgradeBar[j]] = true;
 
     for (let j = 0; j < shipCard.tags.length; j++) shipCard[shipCard.tags[j]] = true;
 
@@ -220,11 +219,6 @@ function createShipHash(ship) {
     if (upgradeId) hash += upgradeId;
     else hash += '0';
   }
-  for (let i = 0; i < ship.extraEquippedUpgrades.length; i++) {
-    const upgradeId = ship.extraEquippedUpgrades[i];
-    if (upgradeId) hash += upgradeId;
-    else hash += '0';
-  }
   return hash;
 }
 
@@ -234,7 +228,7 @@ function equipUpgrade(list, shipIndex, upgradeIndex, upgradeId) {
   ship.equippedUpgrades[upgradeIndex] = upgradeId;
   if (upgradeCard.addsUpgradeSlot) {
     ship.upgradeBar.push(upgradeCard.addsUpgradeSlot[0]);
-    ship.extraEquippedUpgrades.push(null);
+    ship.equippedUpgrades.push(null);
   }
   if (upgradeCard.isMod) ship.numMods++;
   if (upgradeCard.cardSubtype === 'commander') list.commander = upgradeId;
@@ -251,6 +245,41 @@ function equipUpgrade(list, shipIndex, upgradeIndex, upgradeId) {
 }
 
 function unequipUpgrade(list, shipIndex, upgradeIndex) {
+  const ship = list.ships[shipIndex];
+  list.pointTotal -= ship.totalCost;
+  const upgradeCard = cards[ship.equippedUpgrades[upgradeIndex]];
+
+  if (upgradeCard.addsUpgradeSlot) {
+    const upgradeTypeToRemove = upgradeCard.addsUpgradeSlot[0];
+    for (let i = ship.upgradeBar.length - 1; i > -1; i--) {
+      if (ship.upgradeBar[i] === upgradeTypeToRemove) {
+        const extraUpgradeCard = cards[ship.equippedUpgrades[i]];
+        ship.totalCost -= extraUpgradeCard.cost;
+        if (extraUpgradeCard.isUnique) {
+          const name = extraUpgradeCard.displayName ? extraUpgradeCard.displayName : extraUpgradeCard.cardName;
+          list.uniques = deleteItem(list.uniques, list.uniques.indexOf(name));
+        }
+        ship.equippedUpgrades = deleteItem(ship.equippedUpgrades, i);
+        ship.upgradeBar = deleteItem(ship.upgradeBar, i);
+        break;
+      }
+    }
+  }
+
+  if (upgradeCard.isUnique) {
+    const name = upgradeCard.displayName ? upgradeCard.displayName : upgradeCard.cardName;
+    list.uniques = deleteItem(list.uniques, list.uniques.indexOf(name));
+  }
+
+  if (upgradeCard.cardSubtype === 'commander') list.commander = '';
+
+  ship.totalCost -= upgradeCard.cost;
+  ship.equippedUpgrades[upgradeIndex] = null;
+  list.pointTotal += ship.totalCost;
+
+  list.shipHashes[list.shipHashes.indexOf(ship.shipHash)] = createShipHash(ship);
+  ship.shipHash = createShipHash(ship);
+
   return list;
 }
 
@@ -264,7 +293,6 @@ function addShip(list, shipId) {
     totalCost: card.cost,
     upgradeBar: [...card.upgradeBar],
     equippedUpgrades: [],
-    extraEquippedUpgrades: [],
     numMods: 0
   };
   for (let i = 0; i < card.upgradeBar.length; i++) {
@@ -303,13 +331,6 @@ function deleteShip(list, shipIndex) {
   const ship = list.ships[shipIndex];
 
   ship.equippedUpgrades.forEach(id => {
-    if (!id) return;
-    const card = cards[id];
-    const name = card.displayName ? card.displayName : card.cardName;
-    if (list.uniques.includes(name)) list.uniques = deleteItem(list.uniques, list.uniques.indexOf(name));
-  });
-
-  ship.extraEquippedUpgrades.forEach(id => {
     if (!id) return;
     const card = cards[id];
     const name = card.displayName ? card.displayName : card.cardName;
