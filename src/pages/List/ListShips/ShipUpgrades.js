@@ -44,6 +44,7 @@ function ShipUpgrades({ ship, shipIndex, handleCardZoom }) {
       if (upgradeType === 'commander' && currentList.commander) continue;
       if (hasBoardingTeamInWeapons && upgradeType === 'offensive retrofit') continue;
       if (hasBoardingTeamInOffensive && upgradeType === 'weapons team') continue;
+      if (ship.equippedUpgrades[1] === 'kf' && (upgradeType === 'ordnance' || upgradeType === 'turbolasers')) continue;
       addUpgradeButtons.push(
         <AddUpgradeButton
           key={`${upgradeType}_${i}`}
