@@ -5,6 +5,7 @@ import {
   Collapse,
   Button,
   Avatar,
+  Chip,
   Card,
   CardMedia,
   CardActions,
@@ -45,6 +46,7 @@ function ArmadaCard({ isSelected, cardId, handleClick, handleCardZoom }) {
   const classes = useStyles();
   const [isExpanded, setIsExpanded] = useState(false);
   const handleExpandClick = () => setIsExpanded(!isExpanded);
+  const card = cards[cardId];
   const { cost, cardType, cardSubtype, cardName, displayName } = cards[cardId];
   return (
     <Grow unmountOnExit in={true}>
@@ -82,6 +84,20 @@ function ArmadaCard({ isSelected, cardId, handleClick, handleCardZoom }) {
                   alt={upgradeType}
                   src={upgradeTypes[upgradeType].icon}
                   style={{ width: 24, height: 24, marginRight: 4 }}
+                />
+              );
+            })}
+          </CardActions>
+        )}
+        {card.tags && card.tags.length > 0 && (
+          <CardActions disableSpacing>
+            {card.tags.map((tag, i) => {
+              return (
+                <Chip
+                  size="small"
+                  key={`${tag}_${i}`}
+                  label={tag}
+                  style={{ marginRight: 2 }}
                 />
               );
             })}
