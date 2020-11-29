@@ -266,7 +266,6 @@ function unequipUpgrade(list, shipIndex, upgradeIndex) {
   const ship = list.ships[shipIndex];
   list.pointTotal -= ship.totalCost;
   const upgradeCard = cards[ship.equippedUpgrades[upgradeIndex]];
-
   if (upgradeCard.addsUpgradeSlot) {
     const upgradeTypeToRemove = upgradeCard.addsUpgradeSlot[0];
     for (let i = ship.upgradeBar.length - 1; i > -1; i--) {
@@ -279,6 +278,7 @@ function unequipUpgrade(list, shipIndex, upgradeIndex) {
             list.uniques = deleteItem(list.uniques, list.uniques.indexOf(name));
           }
         }
+        if (extraUpgradeCard.isMod) ship.numMods--;
         ship.equippedUpgrades = deleteItem(ship.equippedUpgrades, i);
         ship.upgradeBar = deleteItem(ship.upgradeBar, i);
         break;
@@ -290,6 +290,8 @@ function unequipUpgrade(list, shipIndex, upgradeIndex) {
     const name = upgradeCard.displayName ? upgradeCard.displayName : upgradeCard.cardName;
     list.uniques = deleteItem(list.uniques, list.uniques.indexOf(name));
   }
+
+  if (upgradeCard.isMod) ship.numMods--;
 
   if (upgradeCard.cardSubtype === 'commander') list.commander = '';
 
