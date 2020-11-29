@@ -43,7 +43,7 @@ function SelectorHeader({ cardPaneFilter, setCardPaneFilter }) {
     <Paper style={sticky}>
       {headerContent}
       <div style={{ flexGrow: 1 }} />
-      <IconButton size="small" onClick={() => setCardPaneFilter({ action: 'DISPLAY_LIST' })}>
+      <IconButton onClick={() => setCardPaneFilter({ action: 'DISPLAY_LIST' })}>
         <ClearIcon />
       </IconButton>
     </Paper>
