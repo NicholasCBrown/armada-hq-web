@@ -272,10 +272,12 @@ function unequipUpgrade(list, shipIndex, upgradeIndex) {
     for (let i = ship.upgradeBar.length - 1; i > -1; i--) {
       if (ship.upgradeBar[i] === upgradeTypeToRemove) {
         const extraUpgradeCard = cards[ship.equippedUpgrades[i]];
-        ship.totalCost -= extraUpgradeCard.cost;
-        if (extraUpgradeCard.isUnique) {
-          const name = extraUpgradeCard.displayName ? extraUpgradeCard.displayName : extraUpgradeCard.cardName;
-          list.uniques = deleteItem(list.uniques, list.uniques.indexOf(name));
+        if (extraUpgradeCard) {
+          ship.totalCost -= extraUpgradeCard.cost;
+          if (extraUpgradeCard.isUnique) {
+            const name = extraUpgradeCard.displayName ? extraUpgradeCard.displayName : extraUpgradeCard.cardName;
+            list.uniques = deleteItem(list.uniques, list.uniques.indexOf(name));
+          }
         }
         ship.equippedUpgrades = deleteItem(ship.equippedUpgrades, i);
         ship.upgradeBar = deleteItem(ship.upgradeBar, i);

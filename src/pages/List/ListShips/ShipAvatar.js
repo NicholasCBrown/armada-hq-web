@@ -10,7 +10,8 @@ function ShipAvatar({ shipId, handleCardZoom }) {
       <Img
         alt={cardName}
         src={`${urls.cdn}/${cardType}Cards/${cardName}.jpeg`}
-        style={{ width: 100, margin: '3px 0px 0px -10px' }}
+        style={{ width: 100, margin: '3px 0px 0px -10px', '&:hover': { cursor: 'pointer' } }}
+        onClick={() => handleCardZoom(shipId)}
       />
     </div>
   );

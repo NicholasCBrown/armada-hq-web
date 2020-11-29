@@ -22,6 +22,7 @@ function Squadron({ squadronId, count = 1, handleCardZoom }) {
           alt={cardName}
           src={`${urls.cdn}/${cardType}Cards/${cardName}.jpeg`}
           style={{ width: 100, margin: '0px 0px 0px -20px' }}
+          onClick={() => handleCardZoom(squadronId)}
         />
       </div>
     </Badge>

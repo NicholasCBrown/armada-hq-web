@@ -147,6 +147,7 @@ const cards = JSON.parse(JSON.stringify({
 			"officer",
 			"weapons team",
 			"fleet command",
+			"offensive retrofit",
 			"turbolasers",
 			"turbolasers"
 		],
@@ -4980,7 +4981,33 @@ const cards = JSON.parse(JSON.stringify({
 	"rw": {},
 	"rx": {},
 	"ry": {},
-	"rz": {}
+	"rz": {},
+	"sa": {},
+	"sb": {},
+	"sc": {},
+	"sd": {},
+	"se": {},
+	"sf": {},
+	"sg": {},
+	"sh": {},
+	"si": {},
+	"sj": {},
+	"sk": {},
+	"sl": {},
+	"sm": {},
+	"sn": {},
+	"so": {},
+	"sp": {},
+	"sq": {},
+	"sr": {},
+	"ss": {},
+	"st": {},
+	"su": {},
+	"sv": {},
+	"sw": {},
+	"sx": {},
+	"sy": {},
+	"sz": {}
 }));
 
 export default cards;
