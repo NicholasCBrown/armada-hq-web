@@ -249,6 +249,7 @@ function equipUpgrade(list, shipIndex, upgradeIndex, upgradeId) {
     ship.equippedUpgrades.push(null);
   }
   if (upgradeCard.isMod) ship.numMods++;
+  if (upgradeCard.isUnique) list.uniques.push(upgradeCard.displayName ? upgradeCard.displayName : upgradeCard.cardName);
   if (upgradeCard.cardSubtype === 'commander') list.commander = upgradeId;
   list.shipHashes[list.shipHashes.indexOf(ship.shipHash)] = createShipHash(ship);
   ship.shipHash = createShipHash(ship);

@@ -120,6 +120,7 @@ export function ListProvider({
     );
     setCurrentList({ ...currentList });
   }
+
   const listProps = {
     currentList,
     reorderShips,
