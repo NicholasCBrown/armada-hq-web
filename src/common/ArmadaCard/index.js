@@ -5,7 +5,7 @@ import {
   Collapse,
   Button,
   Avatar,
-  Chip,
+  Typography,
   Card,
   CardMedia,
   CardActions,
@@ -91,16 +91,15 @@ function ArmadaCard({ isSelected, cardId, handleClick, handleCardZoom }) {
         )}
         {card.tags && card.tags.length > 0 && (
           <CardActions disableSpacing>
-            {card.tags.map((tag, i) => {
-              return (
-                <Chip
-                  size="small"
-                  key={`${tag}_${i}`}
-                  label={tag}
-                  style={{ marginRight: 2 }}
-                />
-              );
-            })}
+            {card.tags.map((tag, i) =>
+              <Typography
+                key={`${tag}_${i}`}
+                variant="body2"
+                style={{ marginRight: 4 }}
+              >
+                {`${tag}${i === card.tags.length - 1 ? '' : ', '}`}
+              </Typography>
+            )}
           </CardActions>
         )}
         <CardActions disableSpacing>
