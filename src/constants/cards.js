@@ -3471,7 +3471,7 @@ const cards = JSON.parse(JSON.stringify({
 	"mc": {
 		"isMod": false,
 	  "isUnique": false,
-	  "cost": 6,
+	  "cost": 4,
 	  "cardType": "upgrade",
 	  "cardSubtype": "weapons team",
 	  "cardName": "Ordnance Experts",
