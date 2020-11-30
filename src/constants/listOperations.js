@@ -422,9 +422,16 @@ function generateText(list) {
     const commanderCard = cards[list.commander];
     text += `Commander: ${commanderCard.dispalyName ? commanderCard.displayName : commanderCard.cardName}\n\n`;
   } else text += 'Commander:\n\n';
-  text += `Assault: ${list.assaultObjective}\n`;
-  text += `Defense: ${list.defensiveObjective}\n`;
-  text += `Navigation: ${list.navigationObjective}\n\n`;
+  const assault = cards[list.assaultObjective];
+  const defensive = cards[list.defensiveObjective];
+  const navigation = cards[list.navigationObjective];
+  if (assault)
+    text += `Assault: ${assault.displayName ? assault.displayName : assault.cardName}\n`;
+  if (defensive)
+    text += `Defense: ${defensive.displayName ? defensive.displayName : defensive.cardName}\n`;
+  if (navigation)
+    text += `Navigation: ${navigation.displayName ? navigation.displayName : navigation.cardName}\n`;
+  text += '\n';
 
   for (let i = 0; i < list.ships.length; i++) {
     const ship = list.ships[i];
