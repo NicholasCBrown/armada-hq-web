@@ -1616,7 +1616,7 @@ const cards = JSON.parse(JSON.stringify({
 		"faction": "empire",
 		"cardType": "squadron",
 		"cardSubtype": "TIE Interceptor Squadron",
-		"cost": 11,
+		"cost": 12,
 		"isAce": false,
 		"isUnique": true,
 		"cardName": "Saber Squadron",

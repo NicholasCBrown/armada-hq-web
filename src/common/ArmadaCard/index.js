@@ -89,6 +89,11 @@ function ArmadaCard({ isSelected, cardId, handleClick, handleCardZoom }) {
             })}
           </CardActions>
         )}
+        {card.isMod && (
+          <CardActions disableSpacing>
+            <Typography variant="body2">Modification</Typography>  
+          </CardActions>
+        )}
         {card.tags && card.tags.length > 0 && (
           <CardActions disableSpacing>
             {card.tags.map((tag, i) =>
