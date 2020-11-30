@@ -1148,7 +1148,7 @@ const cards = JSON.parse(JSON.stringify({
 		"cost": 5,
 		"cardType": "upgrade",
 		"cardSubtype": "offensive retrofit",
-		"cardName": "Expanded Hangar Bays",
+		"cardName": "Expanded Hangar Bay",
 		"displayName": "",
 		"requirements": []
 	},
@@ -2145,7 +2145,7 @@ const cards = JSON.parse(JSON.stringify({
 		"faction": "empire",
 		"cardType": "upgrade",
 		"cardSubtype": "commander",
-		"cost": 38,
+		"cost": 28,
 		"isUnique": true,
 		"cardName": "Grand Moff Tarkin",
 		"displayName": ""
@@ -2181,7 +2181,7 @@ const cards = JSON.parse(JSON.stringify({
 		"faction": "rebels",
 		"cardType": "upgrade",
 		"cardSubtype": "commander",
-		"cost": 32,
+		"cost": 27,
 		"isUnique": true,
 		"cardName": "Commander Sato",
 		"displayName": ""
@@ -2226,7 +2226,7 @@ const cards = JSON.parse(JSON.stringify({
 		"faction": "rebels",
 		"cardType": "upgrade",
 		"cardSubtype": "commander",
-		"cost": 30,
+		"cost": 34,
 		"isUnique": true,
 		"cardName": "General Rieekan",
 		"displayName": ""
@@ -2244,7 +2244,7 @@ const cards = JSON.parse(JSON.stringify({
 		"faction": "rebels",
 		"cardType": "upgrade",
 		"cardSubtype": "commander",
-		"cost": 30,
+		"cost": 28,
 		"isUnique": true,
 		"cardName": "Commander Leia Organa",
 		"displayName": "Leia Organa"
@@ -2253,7 +2253,7 @@ const cards = JSON.parse(JSON.stringify({
 		"faction": "rebels",
 		"cardType": "upgrade",
 		"cardSubtype": "commander",
-		"cost": 30,
+		"cost": 27,
 		"isUnique": true,
 		"cardName": "Mon Mothma",
 		"displayName": ""
@@ -3105,7 +3105,7 @@ const cards = JSON.parse(JSON.stringify({
 	"kt": {
 		"isMod": false,
 	  "isUnique": true,
-	  "cost": 8,
+	  "cost": 6,
 	  "cardType": "upgrade",
 	  "cardSubtype": "title",
 	  "cardName": "Admonition",
@@ -3215,7 +3215,7 @@ const cards = JSON.parse(JSON.stringify({
 	"lc": {
 		"isMod": false,
 	  "isUnique": true,
-	  "cost": 8,
+	  "cost": 6,
 	  "cardType": "upgrade",
 	  "cardSubtype": "title",
 	  "cardName": "Mon Karren",
