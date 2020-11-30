@@ -1126,7 +1126,7 @@ const cards = JSON.parse(JSON.stringify({
 		"faction": "rebels",
 		"cardType": "squadron",
 		"cardSubtype": "Ghost",
-		"cost": 12,
+		"cost": 28,
 		"isAce": true,
 		"isUnique": true,
 		"cardName": "Hera Syndulla",
