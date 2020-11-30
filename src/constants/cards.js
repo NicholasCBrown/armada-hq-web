@@ -2854,7 +2854,7 @@ const cards = JSON.parse(JSON.stringify({
 	  "requirements": [
 			"OR",
 			{ "cardNameIncludes": "Executor" },
-			{ "cardNameIncludes": "Superstar" }
+			{ "cardNameIncludes": "Dreadnought" }
 		]
 	},
 	"jw": {
@@ -2868,7 +2868,7 @@ const cards = JSON.parse(JSON.stringify({
 	  "requirements": [
 			"OR",
 			{ "cardNameIncludes": "Executor" },
-			{ "cardNameIncludes": "Superstar" }
+			{ "cardNameIncludes": "Dreadnought" }
 		]
 	},
 	"jx": {
@@ -2882,7 +2882,7 @@ const cards = JSON.parse(JSON.stringify({
 	  "requirements": [
 			"OR",
 			{ "cardNameIncludes": "Executor" },
-			{ "cardNameIncludes": "Superstar" }
+			{ "cardNameIncludes": "Dreadnought" }
 		]
 	},
 	"jy": {
@@ -2895,8 +2895,8 @@ const cards = JSON.parse(JSON.stringify({
 	  "displayName": "",
 	  "requirements": [
 			"OR",
-			{ "cardNameIncludes": "Executor" },
-			{ "cardNameIncludes": "Superstar" }
+			{ "cardNameIncludes": "Dreadnought" },
+			{ "cardNameIncludes": "Executor" }
 		]
 	},
 	"jz": {
