@@ -73,6 +73,7 @@ export function ListProvider({
     setModalContent();
   }
   const resetCardPaneFilter = () => setCardPaneFilter({ action: 'DISPLAY_LIST' });
+  const handleChangeTitle = (newTitle) => setCurrentList({ ...currentList, title: newTitle });
   const handleAddShip = id => setCurrentList({ ...addShip(currentList, id) });
   const handleCopyShip = index => setCurrentList({ ...copyShip(currentList, index) });
   const handleDeleteShip = index => {
@@ -104,6 +105,7 @@ export function ListProvider({
       currentList.shipHashes, startIndex, endIndex
     );
     setCurrentList({ ...currentList });
+    setCardPaneFilter({ action: 'DISPLAY_LIST' });
   }
   const reorderSquadrons = (startIndex, endIndex) => {
     function reorder(arr) {
@@ -125,6 +127,7 @@ export function ListProvider({
     currentList,
     reorderShips,
     reorderSquadrons,
+    handleChangeTitle,
     handleAddShip,
     handleCopyShip,
     handleDeleteShip,
