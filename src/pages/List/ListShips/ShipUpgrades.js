@@ -42,8 +42,14 @@ function ShipUpgrades({ ship, shipIndex, handleCardZoom }) {
     } else {
       const upgradeType = ship.upgradeBar[i];
       if (upgradeType === 'commander' && currentList.commander) continue;
-      if (hasBoardingTeamInWeapons && upgradeType === 'offensive retrofit') continue;
-      if (hasBoardingTeamInOffensive && upgradeType === 'weapons team') continue;
+      if (hasBoardingTeamInWeapons && upgradeType === 'offensive retrofit') {
+        hasBoardingTeamInWeapons = false;
+        continue;
+      };
+      if (hasBoardingTeamInOffensive && upgradeType === 'weapons team') {
+        hasBoardingTeamInOffensive = false;
+        continue;
+      }
       if (ship.equippedUpgrades[1] === 'kf' && (upgradeType === 'ordnance' || upgradeType === 'turbolasers')) continue;
       addUpgradeButtons.push(
         <AddUpgradeButton

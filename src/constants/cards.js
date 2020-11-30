@@ -1142,6 +1142,16 @@ const cards = JSON.parse(JSON.stringify({
 		"cardName": "Kanan Jarrus",
 		"displayName": ""
 	},
+	"cq": {
+		"isMod": false,
+		"isUnique": false,
+		"cost": 5,
+		"cardType": "upgrade",
+		"cardSubtype": "offensive retrofit",
+		"cardName": "Expanded Hangar Bays",
+		"displayName": "",
+		"requirements": []
+	},
 	"cs": {
 		"faction": "rebels",
 		"cardType": "squadron",
